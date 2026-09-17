@@ -28,8 +28,21 @@ PFLICHTVALIDIERUNG
 - 226 bleibt erhalten, wo es bereits vorhanden ist.
 - Keine Datei außerhalb der 20 autorisierten Pfade wurde geändert.
 
-LIEFERUNG
-- Erzeuge `RSB_DE_20_HTML_KORRIGIERT.zip` nur mit den 20 korrigierten HTML-Dateien unter exakt ihren ursprünglichen Repo-Pfaden.
-- Füge `AENDERUNGSBERICHT_DE.txt` hinzu.
-- Füge `SHA256_DE_VORHER_NACHHER.csv` hinzu.
+VERPFLICHTENDER GITHUB-ABLAUF
+1. Starte vom aktuellen `main` und erstelle/verwende den Branch `correcciones/de`. Korrigiere NIEMALS direkt auf `main`.
+2. Ändere in diesem Branch ausschließlich die autorisierten 20 deutschen HTML-Dateien.
+3. Committe die korrigierten HTML-Dateien mit einer klaren Nachricht, z. B. `Correcciones DE: auditoría RSB`.
+4. Öffne einen Pull Request von `correcciones/de` nach `main`. NICHT mergen. Der Eigentümer prüft und entscheidet.
+5. Der PR-Text muss enthalten: exakt geänderte Dateien, angewandte Korrekturen, Validierungsergebnisse, eventuell verbleibende Punkte und Bestätigung, dass nichts außerhalb des Umfangs geändert wurde.
+6. Erzeuge einen vereinheitlichten Diff/Patch gegen `main` mit dem Namen `DIFF_DE.patch`.
+
+ENDLIEFERUNG
+- Erzeuge `RSB_DE_20_HTML_KORRIGIERT.zip` als herunterladbare Sicherung. Dieses ZIP NICHT ins Repository committen.
+- Das ZIP muss enthalten:
+  - die 20 korrigierten HTML-Dateien mit exakt ihren ursprünglichen Repo-Pfaden;
+  - `AENDERUNGSBERICHT_DE.txt`;
+  - `SHA256_DE_VORHER_NACHHER.csv`;
+  - `DIFF_DE.patch` mit den exakten Änderungen gegenüber `main`;
+  - `GITHUB_PR_DE.txt` mit Repository, Branch, Commit-SHA und Pull-Request-URL.
+- Am Ende des Chats liefern: ZIP-Downloadlink, Pull-Request-URL, Branchname und Commit-SHA.
 - Lies vor der Lieferung diesen Prompt erneut und prüfe, dass nichts außerhalb des Umfangs geändert wurde.

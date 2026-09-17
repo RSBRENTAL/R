@@ -28,8 +28,21 @@ OBLIGATORISK VALIDERING
 - Värdet 226 ska finnas kvar där det redan finns.
 - Ingen fil utanför de 20 tillåtna sökvägarna har ändrats.
 
-LEVERANS
-- Skapa `RSB_SV_20_HTML_KORRIGERADE.zip` med endast de 20 korrigerade HTML-filerna och exakt deras ursprungliga repo-sökvägar.
-- Inkludera `ANDRINGSRAPPORT_SV.txt`.
-- Inkludera `SHA256_SV_FORE_EFTER.csv`.
+OBLIGATORISKT GITHUB-FLÖDE
+1. Utgå från aktuell `main` och skapa/använd branchen `correcciones/sv`. Gör ALDRIG korrigeringarna direkt på `main`.
+2. Ändra endast de 20 godkända svenska HTML-filerna i denna branch.
+3. Commit de korrigerade HTML-filerna med ett tydligt meddelande, t.ex. `Correcciones SV: auditoría RSB`.
+4. Öppna en Pull Request från `correcciones/sv` till `main`. MERGA INTE. Ägaren granskar och beslutar.
+5. PR-beskrivningen ska innehålla: exakt ändrade filer, utförda korrigeringar, valideringsresultat, eventuella återstående punkter och bekräftelse att inget utanför omfattningen ändrats.
+6. Skapa en unified diff/patch mot `main` med namnet `DIFF_SV.patch`.
+
+SLUTLEVERANS
+- Skapa `RSB_SV_20_HTML_KORRIGERADE.zip` som nedladdningsbar backup. Commit INTE ZIP-filen till repositoryt.
+- ZIP-filen ska innehålla:
+  - de 20 korrigerade HTML-filerna med exakt deras ursprungliga repo-sökvägar;
+  - `ANDRINGSRAPPORT_SV.txt`;
+  - `SHA256_SV_FORE_EFTER.csv`;
+  - `DIFF_SV.patch` med de exakta ändringarna jämfört med `main`;
+  - `GITHUB_PR_SV.txt` med repository, branch, commit-SHA och Pull Request-URL.
+- I slutet av chatten ska du ge: ZIP-nedladdningslänk, Pull Request-URL, branchnamn och commit-SHA.
 - Läs om denna prompt före leverans och verifiera att ingenting utanför omfattningen har ändrats.

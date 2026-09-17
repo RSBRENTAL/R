@@ -28,8 +28,21 @@ VALIDAÇÃO OBRIGATÓRIA
 - O valor 226 permanece onde já existe.
 - Nenhum ficheiro fora das 20 rotas autorizadas foi alterado.
 
-ENTREGA
-- Gera `RSB_PT_20_HTML_CORRIGIDOS.zip` apenas com os 20 HTML corrigidos e exatamente os seus caminhos originais.
-- Inclui `RELATORIO_ALTERACOES_PT.txt`.
-- Inclui `SHA256_PT_ANTES_DEPOIS.csv`.
+FLUXO GITHUB OBRIGATÓRIO
+1. Parte do `main` atual e cria/usa a branch `correcciones/pt`. NUNCA faças as correções diretamente em `main`.
+2. Aplica nessa branch apenas as alterações autorizadas aos 20 HTML portugueses.
+3. Faz commit dos HTML corrigidos com uma mensagem clara, por exemplo `Correcciones PT: auditoría RSB`.
+4. Abre um Pull Request de `correcciones/pt` para `main`. NÃO faças merge. O proprietário irá rever e decidir.
+5. No corpo do PR inclui: ficheiros exatos modificados, correções aplicadas, resultados de validação, eventuais pendências e confirmação de que nada fora do âmbito foi alterado.
+6. Gera um diff/patch unificado contra `main` chamado `DIFF_PT.patch`.
+
+ENTREGA FINAL
+- Gera `RSB_PT_20_HTML_CORRIGIDOS.zip` como cópia de segurança descarregável. NÃO faças commit deste ZIP no repositório.
+- O ZIP deve conter:
+  - os 20 HTML corrigidos preservando exatamente os seus caminhos originais do repo;
+  - `RELATORIO_ALTERACOES_PT.txt`;
+  - `SHA256_PT_ANTES_DEPOIS.csv`;
+  - `DIFF_PT.patch` com as alterações exatas face a `main`;
+  - `GITHUB_PR_PT.txt` com repositório, branch, SHA do commit e URL do Pull Request.
+- No final do chat entrega: link de download do ZIP, URL do Pull Request, nome da branch e SHA do commit.
 - Antes de entregar, relê este prompt e confirma que nada fora do âmbito foi alterado.

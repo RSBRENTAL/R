@@ -28,8 +28,21 @@ VALIDACIÓ OBLIGATÒRIA
 - El valor 226 es manté on ja existeix.
 - Cap fitxer fora de les 20 rutes autoritzades ha estat modificat.
 
-ENTREGA
-- Genera `RSB_CA_20_HTML_CORREGITS.zip` només amb els 20 HTML corregits i exactament les seves rutes originals.
-- Inclou `INFORME_CANVIS_CA.txt`.
-- Inclou `SHA256_CA_ABANS_DESPRES.csv`.
+FLUX GITHUB OBLIGATORI
+1. Parteix del `main` actual i crea/utilitza la branca `correcciones/ca`. NO facis mai les correccions directament a `main`.
+2. Aplica en aquesta branca únicament els canvis autoritzats als 20 HTML en català.
+3. Fes commit dels HTML corregits amb un missatge clar, per exemple `Correcciones CA: auditoría RSB`.
+4. Obre una Pull Request de `correcciones/ca` cap a `main`. NO la fusionis. El propietari la revisarà i decidirà.
+5. Al cos de la PR indica: fitxers exactes modificats, correccions aplicades, resultats de validació, pendents si n’hi ha i confirmació que no s’ha modificat res fora de l’abast.
+6. Genera un diff/patch unificat contra `main` anomenat `DIFF_CA.patch`.
+
+ENTREGA FINAL
+- Genera `RSB_CA_20_HTML_CORREGITS.zip` com a còpia de seguretat descarregable. NO facis commit d’aquest ZIP al repositori.
+- El ZIP ha de contenir:
+  - els 20 HTML corregits mantenint exactament les rutes originals del repo;
+  - `INFORME_CANVIS_CA.txt`;
+  - `SHA256_CA_ABANS_DESPRES.csv`;
+  - `DIFF_CA.patch` amb els canvis exactes respecte de `main`;
+  - `GITHUB_PR_CA.txt` amb repositori, branca, SHA del commit i URL de la Pull Request.
+- Al final del xat lliura: enllaç de descàrrega del ZIP, URL de la Pull Request, nom de la branca i SHA del commit.
 - Abans d’entregar, rellegeix aquest prompt i comprova que no has modificat res fora de l’abast.
