@@ -28,8 +28,21 @@ VERPLICHTE VALIDATIE
 - Waarde 226 blijft behouden waar deze al aanwezig is.
 - Geen bestand buiten de 20 geautoriseerde paden is gewijzigd.
 
-OPLEVERING
-- Maak `RSB_NL_20_HTML_GECORRIGEERD.zip` met alleen de 20 gecorrigeerde HTML-bestanden en exact hun oorspronkelijke repo-paden.
-- Voeg `WIJZIGINGSRAPPORT_NL.txt` toe.
-- Voeg `SHA256_NL_VOOR_NA.csv` toe.
+VERPLICHTE GITHUB-WERKWIJZE
+1. Start vanaf de actuele `main` en maak/gebruik branch `correcciones/nl`. Corrigeer NOOIT rechtstreeks op `main`.
+2. Pas in die branch uitsluitend de toegestane wijzigingen toe op de 20 Nederlandse HTML-bestanden.
+3. Commit de gecorrigeerde HTML-bestanden met een duidelijke boodschap, bijvoorbeeld `Correcciones NL: auditoría RSB`.
+4. Open een Pull Request van `correcciones/nl` naar `main`. NIET mergen. De eigenaar beoordeelt en beslist.
+5. Vermeld in de PR: exacte gewijzigde bestanden, toegepaste correcties, validatieresultaten, eventuele resterende punten en bevestiging dat niets buiten scope is gewijzigd.
+6. Genereer een unified diff/patch tegen `main` met naam `DIFF_NL.patch`.
+
+EINDOPLEVERING
+- Maak `RSB_NL_20_HTML_GECORRIGEERD.zip` als downloadbare back-up. Commit dit ZIP-bestand NIET naar de repository.
+- Het ZIP-bestand moet bevatten:
+  - de 20 gecorrigeerde HTML-bestanden met exact hun oorspronkelijke repo-paden;
+  - `WIJZIGINGSRAPPORT_NL.txt`;
+  - `SHA256_NL_VOOR_NA.csv`;
+  - `DIFF_NL.patch` met de exacte wijzigingen ten opzichte van `main`;
+  - `GITHUB_PR_NL.txt` met repository, branch, commit-SHA en Pull Request-URL.
+- Geef aan het einde van de chat: ZIP-downloadlink, Pull Request-URL, branchnaam en commit-SHA.
 - Lees vóór oplevering deze prompt opnieuw en controleer dat niets buiten scope is gewijzigd.
