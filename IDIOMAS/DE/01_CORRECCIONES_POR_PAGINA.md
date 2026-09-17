@@ -3,11 +3,13 @@
 ## Decisiones del propietario aplicadas
 - Reseñas canónicas: **226**. No usar 222.
 - Google Maps API: **restringida**; no modificar la key por ser visible en cliente.
-- Reserva: **30 % transferencia + 70 % al recoger**.
-- Depósito scooter de referencia: **250 €**.
 - Sin depósito: bicicletas, patines en línea, patines clásicos, skateboards y longboards.
 - Radio de servicio: **25 km**.
 - No se ofrecen **e-scooters** ni **e-bikes**.
+
+- RECTIFICACIÓN: el esquema 30 % + 70 % no existe y queda anulado; no usarlo como corrección.
+- RECTIFICACIÓN: 250 € de depósito es un dato de una reseña de cliente, no una política oficial; no usarlo como dato canónico.
+- No convertir anécdotas de reseñas (playa, toallas, bañador, importes, depósitos, etc.) en hechos o contenido oficial sin fuente RSB independiente.
 
 ## Reglas
 - La única corrección técnica de código transversal demostrada por la auditoría forense es la relación `width/height` de imágenes.

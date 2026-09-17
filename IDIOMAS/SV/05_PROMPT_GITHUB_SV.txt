@@ -15,7 +15,8 @@ KORRIGERINGAR
 4. Ändra INTE `src`, `srcset`, `sizes`, filnamn, format, komprimering eller de fysiska bildfilerna. Den forensiska granskningen hittade inget generellt fel i `srcset`-bredddeskriptorerna.
 5. RSB-003 / Google Maps: ägaren bekräftar att API-nyckeln är begränsad. Ändra eller ta inte bort nyckeln enbart för att den är synlig på klientsidan.
 6. Recensioner: det kanoniska värdet är 226. Ändra inte till 222.
-7. Kanoniska företagsuppgifter: bokning 30% via banköverföring för bekräftelse + 70% vid hämtning; referensdeposition för scooter 250 €; ingen deposition för cyklar, inlines, klassiska rullskridskor, skateboards eller longboards; serviceområde 25 km; inga e-scooters och inga e-bikes erbjuds. Om en sida behandlar något av dessa ämnen får den inte motsäga uppgifterna. Lägg inte in dem på orelaterade sidor bara för att upprepa dem.
+- Bokningsupplägget 30 % + 70 % FINNS INTE och är annullerat. Använd det inte, korrigera ingen sida mot det och behandla det inte som officiell information. Depositionen på 250 € kommer från en kundrecension och är INTE en officiell RSB-policy; använd den inte som kanonisk uppgift och lägg inte in den på webbplatsen.
+- Regel för kundrecensioner: kunders berättelser är INTE officiella RSB-policyer eller företagsfakta. Gör inte om uppgifter i recensioner om depositioner, belopp, strandbesök, handdukar, badkläder eller liknande till webbplatsinnehåll om de inte bekräftas av en oberoende officiell RSB-källa.
 8. Ändra inte canonical, hreflang, x-default, URL:er, Open Graph URL, JSON-LD URL, breadcrumbs, titlar, descriptions, länkar, datum eller orelaterat innehåll om inte en uttryckligen listad korrigering kräver det.
 9. Ingen refaktorering, redesign eller valfria förbättringar.
 

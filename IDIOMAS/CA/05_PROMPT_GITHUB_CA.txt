@@ -15,7 +15,8 @@ CORRECCIONS
 4. NO modifiquis `src`, `srcset`, `sizes`, noms de fitxer, formats, compressió ni les imatges físiques. L’auditoria no va detectar un error general dels descriptors `srcset`.
 5. RSB-003 / Google Maps: el propietari confirma que l’API key està restringida. No la modifiquis ni l’eliminis només perquè sigui visible al client.
 6. Ressenyes: el valor canònic és 226. No el canviïs a 222.
-7. Dades empresarials canòniques: reserva 30% per transferència per confirmar + 70% en recollir; dipòsit de referència d’scooter 250 €; sense dipòsit per a bicicletes, patins en línia, patins clàssics, skateboards i longboards; radi de servei 25 km; no s’ofereixen e-scooters ni e-bikes. Si una pàgina tracta algun d’aquests temes, no els pot contradir. No els afegeixis a pàgines no relacionades només per repetir-los.
+- L’esquema de reserva 30 % + 70 % NO EXISTEIX i queda anul·lat. No l’utilitzis, no corregeixis cap pàgina cap a aquest esquema i no el tractis com un fet oficial. La xifra de 250 € de dipòsit prové d’una ressenya de client i NO és una política oficial de RSB; no l’utilitzis com a dada canònica ni la introdueixis al web.
+- Regla sobre ressenyes: les experiències explicades pels clients NO són polítiques oficials ni fets empresarials de RSB. No converteixis en contingut web detalls de ressenyes sobre dipòsits, imports, platja, tovalloles, banyador o situacions semblants sense una confirmació independent d’una font oficial de RSB.
 8. No alteris canonical, hreflang, x-default, URLs, Open Graph URL, JSON-LD URL, breadcrumbs, títols, descriptions, enllaços, dates o contingut no relacionat tret que una correcció llistada ho exigeixi explícitament.
 9. Sense refactor, redisseny ni millores opcionals.
 

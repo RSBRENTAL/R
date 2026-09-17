@@ -13,7 +13,8 @@ CORRECTION INSTRUCTIONS
 4. DO NOT change `src`, `srcset`, `sizes`, filenames, formats, compression, or the physical image files. The forensic audit did not find a general `srcset` descriptor problem.
 5. RSB-003 / Google Maps: the owner confirms the API key is restricted. Do not change or remove the key merely because it is visible client-side.
 6. Reviews: the canonical value is 226. Do not change it to 222.
-7. Canonical business facts: booking is 30% by bank transfer to confirm and 70% on collection; reference scooter deposit is €250; no deposit for bikes, inline skates, classic roller skates, skateboards, or longboards; service radius is 25 km; e-scooters and e-bikes are not offered. If a page discusses one of these topics, it must not contradict these facts. Do not insert them into unrelated pages merely to repeat them.
+- The 30% + 70% booking scheme DOES NOT EXIST and is cancelled. Do not use it, do not correct any page toward it, and do not treat it as an official fact. The €250 scooter-deposit figure is from a customer review and is NOT an official RSB policy; do not use it as canonical data or insert it into the website.
+- Customer-review rule: customer anecdotes are NOT official RSB policies or business facts. Do not turn review details about deposits, amounts, beach visits, towels, swimwear, or similar anecdotes into website content unless an independent official RSB source confirms them.
 8. Do not alter canonical, hreflang, x-default, URLs, Open Graph URL, JSON-LD URL, breadcrumbs, titles, descriptions, links, dates, or unrelated content unless explicitly required by a listed correction.
 9. Do not refactor, redesign, or apply optional improvements.
 

@@ -15,7 +15,8 @@ KORREKTUREN
 4. Ändere NICHT `src`, `srcset`, `sizes`, Dateinamen, Formate, Kompression oder die physischen Bilddateien. Die forensische Prüfung fand keinen allgemeinen Fehler der `srcset`-Breitendeskriptoren.
 5. RSB-003 / Google Maps: Der Eigentümer bestätigt, dass der API-Key eingeschränkt ist. Ändere oder entferne ihn nicht nur deshalb, weil er clientseitig sichtbar ist.
 6. Bewertungen: Der kanonische Wert ist 226. Nicht auf 222 ändern.
-7. Kanonische Geschäftsdaten: Buchung 30 % per Überweisung zur Bestätigung + 70 % bei Abholung; Referenz-Kaution für Scooter 250 €; keine Kaution für Fahrräder, Inlineskates, klassische Rollschuhe, Skateboards und Longboards; Service-Radius 25 km; keine E-Scooter und keine E-Bikes. Wenn eine Seite diese Themen behandelt, darf sie diesen Fakten nicht widersprechen. Nicht wahllos in unpassende Seiten einfügen.
+- Das Buchungsschema 30 % + 70 % EXISTIERT NICHT und ist aufgehoben. Nicht verwenden, keine Seite daraufhin korrigieren und nicht als offizielle Angabe behandeln. Die Kautionsangabe von 250 € stammt aus einer Kundenbewertung und ist KEINE offizielle RSB-Richtlinie; nicht als kanonische Angabe verwenden oder in die Website einfügen.
+- Regel zu Kundenbewertungen: Erlebnisse aus Kundenbewertungen sind KEINE offiziellen RSB-Richtlinien oder Unternehmensfakten. Angaben aus Bewertungen zu Kautionen, Beträgen, Strandbesuchen, Handtüchern, Badebekleidung oder Ähnlichem dürfen nicht als Website-Inhalt übernommen werden, sofern sie nicht durch eine unabhängige offizielle RSB-Quelle bestätigt sind.
 8. Canonical, hreflang, x-default, URLs, Open-Graph-URL, JSON-LD-URL, Breadcrumbs, Titel, Descriptions, Links, Daten oder nicht betroffene Inhalte nicht ändern, außer eine gelistete Korrektur verlangt es ausdrücklich.
 9. Kein Refactoring, Redesign oder optionale Optimierungen.
 

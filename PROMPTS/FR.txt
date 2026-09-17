@@ -15,7 +15,8 @@ CORRECTIONS
 4. NE modifie PAS `src`, `srcset`, `sizes`, les noms, formats, compression ni les fichiers image physiques. L’audit n’a pas trouvé de problème général de descripteurs `srcset`.
 5. RSB-003 / Google Maps : le propriétaire confirme que la clé API est restreinte. Ne la modifie ni ne la supprime simplement parce qu’elle est visible côté client.
 6. Avis : la valeur canonique est 226. Ne la remplace pas par 222.
-7. Données métier canoniques : réservation 30 % par virement pour confirmer + 70 % au retrait ; dépôt scooter de référence 250 € ; pas de dépôt pour vélos, rollers en ligne, patins classiques, skateboards et longboards ; rayon de service 25 km ; pas de e-scooters ni de e-bikes. Si une page aborde l’un de ces sujets, elle ne doit pas les contredire. Ne les ajoute pas aux pages sans rapport uniquement pour les répéter.
+- Le schéma de réservation 30 % + 70 % N’EXISTE PAS et est annulé. Ne l’utilise pas, ne corrige aucune page vers ce schéma et ne le traite pas comme un fait officiel. Le montant de 250 € de caution provient d’un avis client et N’EST PAS une politique officielle de RSB ; ne l’utilise pas comme donnée canonique et ne l’insère pas sur le site.
+- Règle sur les avis clients : les anecdotes racontées par des clients NE constituent PAS des politiques officielles ni des faits commerciaux de RSB. Ne transforme pas en contenu du site des détails d’avis sur des cautions, montants, plage, serviettes, maillot de bain ou faits similaires sans confirmation indépendante par une source officielle RSB.
 8. Ne modifie pas canonical, hreflang, x-default, URLs, Open Graph URL, JSON-LD URL, breadcrumbs, titres, descriptions, liens, dates ou contenu sans rapport sauf correction explicitement listée.
 9. Aucun refactor, redesign ou amélioration optionnelle.
 

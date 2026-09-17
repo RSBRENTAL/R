@@ -15,7 +15,9 @@ INSTRUCCIONES DE CORRECCIÓN
 4. NO cambies `src`, `srcset`, `sizes`, nombres de archivo, formatos, compresión ni las imágenes físicas. La auditoría no detectó un fallo general de `srcset`.
 5. RSB-003 / Google Maps: el propietario confirma que la API está restringida. No cambies ni elimines la clave por ser visible en cliente.
 6. Reseñas: el valor canónico es 226. No lo cambies a 222.
-7. Datos empresariales canónicos: reserva 30 % por transferencia + 70 % al recoger; depósito scooter de referencia 250 €; sin depósito para bicicletas, patines en línea, patines clásicos, skateboards y longboards; radio 25 km; no existen e-scooters ni e-bikes en la oferta. Si una página trata esos temas, no puede contradecirlos. No insertes estos datos en páginas no relacionadas solo por repetirlos.
+- El esquema de reserva 30 % + 70 % NO EXISTE y queda anulado. No usarlo, no corregir ninguna página hacia ese esquema y no tratarlo como dato oficial.
+- La cifra de 250 € de depósito NO es una política oficial de RSB: procede de una reseña de cliente. No usarla como dato canónico ni insertarla en la web.
+- Regla sobre reseñas: las experiencias narradas por clientes NO son políticas ni hechos empresariales oficiales. No convertir en contenido de la web anécdotas de reseñas sobre depósitos, importes, playa, toallas, bañador u otros detalles similares salvo que exista una fuente oficial independiente de RSB que lo confirme.
 8. No alteres canonical, hreflang, x-default, URLs, Open Graph URL, JSON-LD URL, breadcrumbs, títulos, descriptions, enlaces, fechas ni contenido no relacionado salvo que sea imprescindible para una corrección expresamente listada.
 9. No hagas refactor, rediseño ni mejoras opcionales.
 

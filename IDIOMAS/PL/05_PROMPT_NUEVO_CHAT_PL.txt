@@ -13,7 +13,8 @@ POPRAWKI
 4. NIE zmieniaj `src`, `srcset`, `sizes`, nazw plików, formatów, kompresji ani fizycznych plików obrazów. Audyt nie wykazał ogólnego problemu z deskryptorami szerokości `srcset`.
 5. RSB-003 / Google Maps: właściciel potwierdza, że klucz API jest ograniczony. Nie zmieniaj ani nie usuwaj klucza tylko dlatego, że jest widoczny po stronie klienta.
 6. Opinie: wartość kanoniczna to 226. Nie zmieniaj na 222.
-7. Kanoniczne dane biznesowe: rezerwacja 30% przelewem w celu potwierdzenia + 70% przy odbiorze; referencyjny depozyt za skuter 250 €; brak depozytu za rowery, rolki inline, klasyczne wrotki, deskorolki i longboardy; promień obsługi 25 km; firma nie oferuje e-scooterów ani e-bike'ów. Jeżeli strona porusza któryś z tych tematów, nie może im przeczyć. Nie dodawaj tych informacji do niepowiązanych stron tylko po to, aby je powtarzać.
+- Schemat rezerwacji 30% + 70% NIE ISTNIEJE i zostaje unieważniony. Nie używaj go, nie poprawiaj żadnej strony w tym kierunku i nie traktuj go jako oficjalnego faktu. Kwota kaucji 250 € pochodzi z opinii klienta i NIE jest oficjalną polityką RSB; nie używaj jej jako danych kanonicznych ani nie dodawaj jej do strony.
+- Zasada dotycząca opinii klientów: opisy doświadczeń klientów NIE są oficjalnymi zasadami ani faktami biznesowymi RSB. Nie zamieniaj informacji z opinii o kaucjach, kwotach, plaży, ręcznikach, stroju kąpielowym lub podobnych anegdotach w treść strony bez niezależnego potwierdzenia w oficjalnym źródle RSB.
 8. Nie zmieniaj canonical, hreflang, x-default, URL-i, Open Graph URL, JSON-LD URL, breadcrumbs, tytułów, descriptions, linków, dat ani niepowiązanej treści, chyba że wymaga tego wyraźnie wskazana poprawka.
 9. Bez refaktoryzacji, redesignu i opcjonalnych ulepszeń.
 

@@ -13,7 +13,8 @@ CORREZIONI
 4. NON modificare `src`, `srcset`, `sizes`, nomi file, formati, compressione o file immagine fisici. L’audit non ha rilevato un errore generale nei descrittori `srcset`.
 5. RSB-003 / Google Maps: il proprietario conferma che la chiave API è limitata. Non modificarla o rimuoverla solo perché è visibile lato client.
 6. Recensioni: il valore canonico è 226. Non cambiarlo in 222.
-7. Dati aziendali canonici: prenotazione 30% tramite bonifico per confermare + 70% al ritiro; deposito scooter di riferimento 250 €; nessun deposito per biciclette, pattini in linea, pattini classici, skateboard e longboard; raggio di servizio 25 km; non vengono offerti e-scooter né e-bike. Se una pagina tratta uno di questi temi non deve contraddirli. Non inserirli in pagine non correlate solo per ripeterli.
+- Lo schema di prenotazione 30% + 70% NON ESISTE ed è annullato. Non usarlo, non correggere alcuna pagina verso tale schema e non trattarlo come dato ufficiale. La cifra di 250 € per il deposito proviene da una recensione cliente e NON è una politica ufficiale RSB; non usarla come dato canonico né inserirla nel sito.
+- Regola sulle recensioni: gli aneddoti dei clienti NON sono politiche ufficiali né fatti aziendali RSB. Non trasformare in contenuto del sito dettagli delle recensioni su depositi, importi, spiaggia, asciugamani, costume da bagno o fatti simili senza una conferma indipendente da una fonte ufficiale RSB.
 8. Non alterare canonical, hreflang, x-default, URL, Open Graph URL, JSON-LD URL, breadcrumb, title, description, link, date o contenuti non correlati salvo una correzione esplicitamente elencata.
 9. Nessun refactor, redesign o miglioramento opzionale.
 
