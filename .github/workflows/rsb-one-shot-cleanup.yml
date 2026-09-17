@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - '._rsb_cleanup_payload.part4b'
+      - '._rsb_cleanup_payload.part2b4'
 
 permissions:
   contents: write
@@ -29,7 +29,10 @@ jobs:
           names = [
               '._rsb_cleanup_payload.part1',
               '._rsb_cleanup_payload.part2a',
-              '._rsb_cleanup_payload.part2b',
+              '._rsb_cleanup_payload.part2b1',
+              '._rsb_cleanup_payload.part2b2',
+              '._rsb_cleanup_payload.part2b3',
+              '._rsb_cleanup_payload.part2b4',
               '._rsb_cleanup_payload.part3',
               '._rsb_cleanup_payload.part4a',
               '._rsb_cleanup_payload.part4b',
@@ -81,7 +84,11 @@ jobs:
               if term not in audit:
                   raise AssertionError(f'Missing required audit-prompt term: {term}')
 
-          cleanup_names = names + ['._rsb_cleanup_payload.part2', '._rsb_cleanup_payload.part4']
+          cleanup_names = names + [
+              '._rsb_cleanup_payload.part2',
+              '._rsb_cleanup_payload.part2b',
+              '._rsb_cleanup_payload.part4',
+          ]
           for name in cleanup_names:
               p = root / name
               if p.exists():
