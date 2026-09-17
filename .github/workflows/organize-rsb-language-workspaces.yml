@@ -1,0 +1,174 @@
+name: Organize RSB language workspaces
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  organize:
+    if: ${{ !contains(github.event.head_commit.message || '', '[skip-lang-sync]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Extract language workspaces and adapt prompts
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import csv, hashlib, shutil, zipfile
+
+          repo = Path.cwd()
+          archive = repo / 'RSB_CORRECCIONES_POR_IDIOMA_Y_PROMPTS_2026-09-17.zip'
+          if not archive.exists():
+              raise SystemExit(f'Missing source package: {archive.name}')
+
+          tmp = repo / '.rsb_lang_extract'
+          if tmp.exists():
+              shutil.rmtree(tmp)
+          tmp.mkdir()
+          with zipfile.ZipFile(archive) as zf:
+              zf.extractall(tmp)
+
+          roots = [p for p in tmp.iterdir() if p.is_dir()]
+          if len(roots) != 1:
+              raise SystemExit(f'Unexpected ZIP root count: {len(roots)}')
+          srcroot = roots[0]
+
+          mapping = [
+              ('01_EN_Ingles', 'EN', 'English'),
+              ('02_ES_Espanol', 'ES', 'Español'),
+              ('03_FR_Francais', 'FR', 'Français'),
+              ('04_IT_Italiano', 'IT', 'Italiano'),
+              ('05_DE_Deutsch', 'DE', 'Deutsch'),
+              ('06_NL_Nederlands', 'NL', 'Nederlands'),
+              ('07_PT_Portugues', 'PT', 'Português'),
+              ('08_CA_Catala', 'CA', 'Català'),
+              ('09_SV_Svenska', 'SV', 'Svenska'),
+              ('10_PL_Polski', 'PL', 'Polski'),
+          ]
+
+          out = repo / 'IDIOMAS'
+          shared = repo / 'AUDITORIA_COMPARTIDA'
+          prompts = repo / 'PROMPTS'
+          for p in (out, shared, prompts):
+              if p.exists():
+                  shutil.rmtree(p)
+              p.mkdir(parents=True)
+
+          shared_src = srcroot / '00_COMPARTIDO'
+          for name in [
+              'AUDITORIA_19_IMAGENES_AFECTADAS.csv',
+              'AUDITORIA_LISTADO_1_NO_IMAGEN.csv',
+              'AUDITORIA_LISTADO_2_398_DIMENSIONES.csv',
+              'DATOS_CANONICOS_PROPIETARIO.md',
+              'DECISIONES_OPERATIVAS.md',
+              'MANIFEST_200_HTML_SHA256.csv',
+              'SHA256_FUENTES.txt',
+          ]:
+              shutil.copy2(shared_src / name, shared / name)
+
+          read_zip_line = {
+              'EN': '- Read EVERY file in `IDIOMAS/EN/` from start to finish before changing anything. Do not use another language folder as a substitute.',
+              'ES': '- Lee TODOS los archivos de `IDIOMAS/ES/` de principio a fin antes de modificar nada. No uses otra carpeta de idioma como sustituto.',
+              'FR': '- Lis TOUS les fichiers de `IDIOMAS/FR/` du début à la fin avant toute modification. N’utilise aucun autre dossier linguistique comme substitut.',
+              'IT': '- Leggi TUTTI i file di `IDIOMAS/IT/` dall’inizio alla fine prima di modificare qualsiasi cosa. Non usare un’altra cartella linguistica come sostituto.',
+              'DE': '- Lies ALLE Dateien in `IDIOMAS/DE/` vollständig, bevor du etwas änderst. Verwende keinen anderen Sprachordner als Ersatz.',
+              'NL': '- Lees ALLE bestanden in `IDIOMAS/NL/` volledig voordat je iets wijzigt. Gebruik geen map van een andere taal als vervanging.',
+              'PT': '- Lê TODOS os ficheiros em `IDIOMAS/PT/` do início ao fim antes de alterar qualquer coisa. Não uses outra pasta de idioma como substituto.',
+              'CA': '- Llegeix TOTS els fitxers d’`IDIOMAS/CA/` de principi a fi abans de modificar res. No utilitzis cap altra carpeta d’idioma com a substitut.',
+              'SV': '- Läs ALLA filer i `IDIOMAS/SV/` från början till slut innan du ändrar något. Använd inte en annan språkmapp som ersättning.',
+              'PL': '- Przeczytaj WSZYSTKIE pliki w `IDIOMAS/PL/` od początku do końca przed wprowadzeniem jakichkolwiek zmian. Nie używaj folderu innego języka jako zamiennika.',
+          }
+          first_line = {
+              'EN': 'CORRECT ONLY THE 20 ENGLISH PAGES IN THE GITHUB REPOSITORY `RSBRENTAL/R`, BRANCH `main`, FOLDER `IDIOMAS/EN/`.',
+              'ES': 'CORRIGE ÚNICAMENTE LAS 20 PÁGINAS EN ESPAÑOL DEL REPOSITORIO GITHUB `RSBRENTAL/R`, RAMA `main`, CARPETA `IDIOMAS/ES/`.',
+              'FR': 'CORRIGE UNIQUEMENT LES 20 PAGES EN FRANÇAIS DU DÉPÔT GITHUB `RSBRENTAL/R`, BRANCHE `main`, DOSSIER `IDIOMAS/FR/`.',
+              'IT': 'CORREGGI ESCLUSIVAMENTE LE 20 PAGINE IN ITALIANO DEL REPOSITORY GITHUB `RSBRENTAL/R`, BRANCH `main`, CARTELLA `IDIOMAS/IT/`.',
+              'DE': 'KORRIGIERE AUSSCHLIESSLICH DIE 20 DEUTSCHEN SEITEN IM GITHUB-REPOSITORY `RSBRENTAL/R`, BRANCH `main`, ORDNER `IDIOMAS/DE/`.',
+              'NL': 'CORRIGEER UITSLUITEND DE 20 NEDERLANDSE PAGINA’S IN DE GITHUB-REPOSITORY `RSBRENTAL/R`, BRANCH `main`, MAP `IDIOMAS/NL/`.',
+              'PT': 'CORRIGE EXCLUSIVAMENTE AS 20 PÁGINAS EM PORTUGUÊS DO REPOSITÓRIO GITHUB `RSBRENTAL/R`, BRANCH `main`, PASTA `IDIOMAS/PT/`.',
+              'CA': 'CORREGEIX EXCLUSIVAMENT LES 20 PÀGINES EN CATALÀ DEL REPOSITORI GITHUB `RSBRENTAL/R`, BRANCA `main`, CARPETA `IDIOMAS/CA/`.',
+              'SV': 'KORRIGERA ENDAST DE 20 SVENSKA SIDORNA I GITHUB-REPOSITORYT `RSBRENTAL/R`, BRANCH `main`, MAPP `IDIOMAS/SV/`.',
+              'PL': 'POPRAW WYŁĄCZNIE 20 POLSKICH STRON W REPOZYTORIUM GITHUB `RSBRENTAL/R`, GAŁĄŹ `main`, FOLDER `IDIOMAS/PL/`.',
+          }
+          source_line = {
+              'EN': '- The only code source for this task is `RSBRENTAL/R` → `main` → `IDIOMAS/EN/PAGINAS_REPO/`.',
+              'ES': '- La única fuente de código para este trabajo es `RSBRENTAL/R` → `main` → `IDIOMAS/ES/PAGINAS_REPO/`.',
+              'FR': '- L’unique source de code pour ce travail est `RSBRENTAL/R` → `main` → `IDIOMAS/FR/PAGINAS_REPO/`.',
+              'IT': '- L’unica fonte del codice per questo lavoro è `RSBRENTAL/R` → `main` → `IDIOMAS/IT/PAGINAS_REPO/`.',
+              'DE': '- Die einzige Codequelle für diese Aufgabe ist `RSBRENTAL/R` → `main` → `IDIOMAS/DE/PAGINAS_REPO/`.',
+              'NL': '- De enige codebron voor deze taak is `RSBRENTAL/R` → `main` → `IDIOMAS/NL/PAGINAS_REPO/`.',
+              'PT': '- A única fonte de código para este trabalho é `RSBRENTAL/R` → `main` → `IDIOMAS/PT/PAGINAS_REPO/`.',
+              'CA': '- L’única font de codi per a aquest treball és `RSBRENTAL/R` → `main` → `IDIOMAS/CA/PAGINAS_REPO/`.',
+              'SV': '- Den enda kodkällan för den här uppgiften är `RSBRENTAL/R` → `main` → `IDIOMAS/SV/PAGINAS_REPO/`.',
+              'PL': '- Jedynym źródłem kodu dla tego zadania jest `RSBRENTAL/R` → `main` → `IDIOMAS/PL/PAGINAS_REPO/`.',
+          }
+
+          for srcname, code, label in mapping:
+              src = srcroot / srcname
+              dst = out / code
+              shutil.copytree(src, dst, dirs_exist_ok=True)
+
+              old_prompt = dst / f'05_PROMPT_NUEVO_CHAT_{code}.txt'
+              text = old_prompt.read_text(encoding='utf-8')
+              lines = text.splitlines()
+              if lines:
+                  lines[0] = first_line[code]
+              for i, line in enumerate(lines):
+                  if line.startswith('- ') and 'ZIP' in line.upper():
+                      lines[i] = read_zip_line[code]
+                      break
+              text = '\n'.join(lines) + '\n'
+              old_dir = srcname
+              text = text.replace('`00_FUENTES/RSB_WEB_REPO_FINAL_CORREGIDO_REAUDITADO_2026-09-15(5).zip`', f'`RSBRENTAL/R` → `main` → `IDIOMAS/{code}/PAGINAS_REPO/`')
+              text = text.replace(f'`{old_dir}/04_MANIFEST_20_PAGINAS_SHA256.csv`', f'`IDIOMAS/{code}/04_MANIFEST_20_PAGINAS_SHA256.csv`')
+              text = text.replace(f'`{old_dir}/01_CORRECCIONES_POR_PAGINA.md`', f'`IDIOMAS/{code}/01_CORRECCIONES_POR_PAGINA.md`')
+              text = text.replace(f'`{old_dir}/02_ERRORES_DIMENSIONES_IMAGENES.csv`', f'`IDIOMAS/{code}/02_ERRORES_DIMENSIONES_IMAGENES.csv`')
+              tlines = text.splitlines()
+              insert_at = 2 if len(tlines) > 2 else 1
+              tlines.insert(insert_at, source_line[code])
+              tlines.insert(insert_at + 1, f'- Exclusive workspace: `IDIOMAS/{code}/`. Do not inspect, modify, or use `IDIOMAS/*` from any other language except to verify a cross-language invariant explicitly required by the listed correction.')
+              text = '\n'.join(tlines) + '\n'
+              github_prompt = dst / f'05_PROMPT_GITHUB_{code}.txt'
+              github_prompt.write_text(text, encoding='utf-8')
+              shutil.copy2(github_prompt, prompts / f'{code}.txt')
+
+          readme = '''# RSB — Workspaces por idioma\n\nEste repositorio contiene 10 espacios de trabajo independientes, uno por idioma, derivados del paquete auditado.\n\n## Uso\n\nCada chat debe trabajar exclusivamente con su carpeta:\n\n- `IDIOMAS/EN/`\n- `IDIOMAS/ES/`\n- `IDIOMAS/FR/`\n- `IDIOMAS/IT/`\n- `IDIOMAS/DE/`\n- `IDIOMAS/NL/`\n- `IDIOMAS/PT/`\n- `IDIOMAS/CA/`\n- `IDIOMAS/SV/`\n- `IDIOMAS/PL/`\n\nEl prompt listo para copiar de cada idioma está en `PROMPTS/<IDIOMA>.txt` y también dentro de cada carpeta como `05_PROMPT_GITHUB_<IDIOMA>.txt`.\n\n## Datos canónicos fijados por el propietario\n\n- Reseñas: **226**. No sustituir por 222.\n- Reserva: **30 % por transferencia para confirmar + 70 % al recoger**.\n- Depósito scooter de referencia: **250 €**.\n- Sin depósito: bicicletas, patines en línea, patines clásicos, skateboards y longboards.\n- Radio de servicio: **25 km**.\n- Google Maps API: el propietario confirma que la clave está restringida; no eliminarla por ser visible en cliente.\n- No se ofrecen e-scooters ni e-bikes.\n\n## Regla de alcance\n\nLos chats por idioma no deben modificar archivos raíz compartidos, CSS, JS, JSON, XML, configuración ni imágenes físicas salvo autorización expresa del prompt de ese idioma.\n\nLa evidencia compartida legible está en `AUDITORIA_COMPARTIDA/`. Los archivos fuente originales permanecen en la raíz del repositorio.\n'''
+          (repo / 'README.md').write_text(readme, encoding='utf-8')
+
+          rows=[]
+          for _, code, _ in mapping:
+              d=out/code
+              html=list((d/'PAGINAS_REPO').rglob('*.html'))
+              if len(html) != 20:
+                  raise SystemExit(f'{code}: expected 20 HTML, found {len(html)}')
+              p=d/f'05_PROMPT_GITHUB_{code}.txt'
+              if not p.exists():
+                  raise SystemExit(f'{code}: missing GitHub prompt')
+              rows.append((code, len(html), len(list(d.rglob('*'))), hashlib.sha256(p.read_bytes()).hexdigest()))
+          with (repo/'IDIOMAS'/'VERIFICACION_10_IDIOMAS.csv').open('w', encoding='utf-8', newline='') as f:
+              w=csv.writer(f); w.writerow(['idioma','html','entradas_totales','sha256_prompt_github']); w.writerows(rows)
+
+          shutil.rmtree(tmp)
+          PY
+
+      - name: Verify and commit
+        shell: bash
+        run: |
+          test "$(find IDIOMAS -path '*/PAGINAS_REPO/*' -name '*.html' | wc -l)" -eq 200
+          test "$(find PROMPTS -maxdepth 1 -name '*.txt' | wc -l)" -eq 10
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md IDIOMAS AUDITORIA_COMPARTIDA PROMPTS
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "Organize 10 language workspaces [skip-lang-sync]"
+          git push
