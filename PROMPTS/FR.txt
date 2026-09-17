@@ -28,21 +28,8 @@ VALIDATION OBLIGATOIRE
 - La valeur 226 reste inchangée là où elle existe.
 - Aucun fichier hors des 20 routes autorisées n’est modifié.
 
-FLUX GITHUB OBLIGATOIRE
-1. Pars du `main` actuel et crée/utilise la branche `correcciones/fr`. Ne commit JAMAIS les corrections directement sur `main`.
-2. Applique uniquement les modifications autorisées aux 20 HTML français dans cette branche.
-3. Commit les HTML corrigés avec un message clair, par exemple `Correcciones FR: auditoría RSB`.
-4. Ouvre une Pull Request de `correcciones/fr` vers `main`. NE la fusionne PAS. Le propriétaire fera la révision.
-5. Dans la PR, indique les fichiers modifiés, corrections appliquées, résultats de validation, éventuels points restant et confirme qu’aucun fichier hors périmètre n’a été modifié.
-6. Génère un diff/patch unifié par rapport à `main` nommé `DIFF_FR.patch`.
-
-LIVRAISON FINALE
-- Génère `RSB_FR_20_HTML_CORRIGES.zip` comme sauvegarde téléchargeable. Ne commit pas ce ZIP dans le dépôt.
-- Le ZIP doit contenir :
-  - les 20 HTML corrigés avec leurs chemins repo d’origine exacts ;
-  - `RAPPORT_MODIFICATIONS_FR.txt` ;
-  - `SHA256_FR_AVANT_APRES.csv` ;
-  - `DIFF_FR.patch` avec les changements exacts par rapport à `main` ;
-  - `GITHUB_PR_FR.txt` avec dépôt, branche, SHA du commit et URL de la Pull Request.
-- À la fin du chat, fournis le lien de téléchargement du ZIP, l’URL de la PR, le nom de la branche et le SHA du commit.
+LIVRAISON
+- Génère `RSB_FR_20_HTML_CORRIGES.zip` avec uniquement les 20 HTML corrigés et leurs chemins originaux exacts.
+- Ajoute `RAPPORT_MODIFICATIONS_FR.txt`.
+- Ajoute `SHA256_FR_AVANT_APRES.csv`.
 - Relis ce prompt avant la livraison et vérifie que rien hors périmètre n’a été modifié.
