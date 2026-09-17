@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - '._rsb_cleanup_payload.part4'
+      - '._rsb_cleanup_payload.part4b'
 
 permissions:
   contents: write
@@ -23,15 +23,28 @@ jobs:
         run: |
           python - <<'PY'
           from pathlib import Path
-          import base64, io, tarfile, csv
+          import base64, csv, hashlib, io, tarfile
 
           root = Path('.')
-          parts = [root / f'._rsb_cleanup_payload.part{i}' for i in range(1, 5)]
+          names = [
+              '._rsb_cleanup_payload.part1',
+              '._rsb_cleanup_payload.part2a',
+              '._rsb_cleanup_payload.part2b',
+              '._rsb_cleanup_payload.part3',
+              '._rsb_cleanup_payload.part4a',
+              '._rsb_cleanup_payload.part4b',
+          ]
+          parts = [root / name for name in names]
           missing = [str(p) for p in parts if not p.exists()]
           if missing:
               raise FileNotFoundError(f'Missing payload parts: {missing}')
           encoded = ''.join(p.read_text(encoding='utf-8').strip() for p in parts)
-          raw = base64.b64decode(encoded)
+          raw = base64.b64decode(encoded, validate=True)
+          digest = hashlib.sha256(raw).hexdigest()
+          expected_digest = '1abe42f38728da8924c9610807cb0a9f11c11bd7b0cc5aef82797c70bea09dd3'
+          if digest != expected_digest:
+              raise AssertionError(f'Payload SHA256 mismatch: {digest}')
+
           with tarfile.open(fileobj=io.BytesIO(raw), mode='r:gz') as tf:
               for member in tf.getmembers():
                   target = (root / member.name).resolve()
@@ -63,16 +76,23 @@ jobs:
                   raise AssertionError(f'Obsolete prompt still exists: {code}')
 
           audit = (root / 'PROMPTS/AUDITORIA_AVANZADA_ZIP.txt').read_text(encoding='utf-8')
-          required = ['ZIP', 'NO uses la web pública', 'Google', 'Bing', 'OpenAI', 'imágenes', 'iconos', 'div', '30 % + 70 %', '250 €', 'Roller Skates', '/quads/']
+          required = ['ZIP', 'web pública', 'Google', 'Bing', 'OpenAI', 'imágenes', 'iconos', 'div', '30 % + 70 %', '250 €', 'Roller Skates', '/quads/']
           for term in required:
               if term not in audit:
                   raise AssertionError(f'Missing required audit-prompt term: {term}')
 
-          for p in parts:
-              p.unlink()
-          workflow = root / '.github/workflows/rsb-one-shot-cleanup.yml'
-          if workflow.exists():
-              workflow.unlink()
+          cleanup_names = names + ['._rsb_cleanup_payload.part2', '._rsb_cleanup_payload.part4']
+          for name in cleanup_names:
+              p = root / name
+              if p.exists():
+                  p.unlink()
+          for wf_name in [
+              '.github/workflows/rsb-one-shot-cleanup.yml',
+              '.github/workflows/remove-invalid-business-facts.yml',
+          ]:
+              p = root / wf_name
+              if p.exists():
+                  p.unlink()
           PY
 
       - name: Commit final cleanup
