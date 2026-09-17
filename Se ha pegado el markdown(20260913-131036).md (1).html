@@ -1,0 +1,1272 @@
+/Deepresearch
+
+# RSB RENTAL SCOOTER BARCELONA
+
+# AUDITORÍA FORENSE COMPLETA PREVIA A PRODUCCIÓN
+
+Voy a adjuntar un ZIP:
+
+`RSB_WEB_SERVIDOR_TODOS_CAMBIOS_ACTUALIZADOS_2026-09-13.zip`
+
+## CONTEXTO FUNDAMENTAL
+
+Este ZIP NO es una muestra parcial.
+
+Este ZIP representa la versión COMPLETA de la web que se pretende subir al servidor y SUSTITUIR la web actualmente publicada.
+
+Por tanto:
+
+**EL ZIP ADJUNTO ES LA FUENTE PRIMARIA Y AUTORITATIVA DEL CÓDIGO QUE DEBES AUDITAR.**
+
+No presupongas que la web actualmente publicada contiene las mismas versiones.
+
+La web pública:
+
+`https://rentalscooterbarcelona.com/`
+
+puede utilizarse para comprobaciones externas, comparación con producción, comportamiento HTTP, indexación, SERP, redirecciones, accesibilidad de recursos, Search Engine visibility, etc.
+
+Pero NO debes utilizar la web pública para sustituir el análisis del código incluido en el ZIP.
+
+---
+
+# OBJETIVO
+
+Realiza una auditoría FORENSE, COMPLETA, MULTILINGÜE y PREVIA A PRODUCCIÓN del ZIP.
+
+Quiero saber si este paquete está realmente preparado para sustituir toda la web.
+
+Debes encontrar:
+
+- errores demostrables;
+- incoherencias;
+- regresiones;
+- archivos ausentes;
+- archivos sobrantes;
+- referencias rotas;
+- errores SEO;
+- errores técnicos;
+- errores de imágenes;
+- errores de datos estructurados;
+- problemas multilingües;
+- problemas para Google;
+- problemas para Bing;
+- problemas de descubrimiento por sistemas de IA;
+- problemas de indexación;
+- problemas de rastreo;
+- oportunidades claras de mejora respaldadas por documentación oficial.
+
+NO MODIFIQUES NINGÚN ARCHIVO.
+
+Primero quiero únicamente AUDITORÍA, EVIDENCIA y PLAN DE CORRECCIÓN.
+
+---
+
+# PRINCIPIO ABSOLUTO
+
+## EXACTITUD Y VERIFICACIÓN > RAPIDEZ
+
+Prefiero una auditoría lenta y demostrable a una lista larga de falsos positivos.
+
+No inventes.
+
+No presupongas.
+
+No conviertas una recomendación opcional en un error.
+
+No marques algo como incorrecto únicamente porque tú lo harías de otra forma.
+
+Cuando no puedas demostrar algo, indícalo expresamente.
+
+---
+
+# PASO 1 — INVENTARIO REAL DEL ZIP
+
+ANTES de emitir conclusiones:
+
+1. Abre realmente el ZIP.
+2. Inventaría todo su contenido.
+3. Cuenta:
+   - archivos totales;
+   - HTML;
+   - CSS;
+   - JavaScript;
+   - JSON;
+   - XML;
+   - TXT;
+   - imágenes;
+   - WebP;
+   - SVG;
+   - JPG/JPEG/PNG;
+   - PHP si existen;
+   - archivos de configuración;
+   - `.htaccess` si existe;
+   - robots.txt;
+   - sitemap/sitemaps;
+   - manifest;
+   - llms.txt;
+   - agents;
+   - archivos relacionados con IA;
+   - cualquier otro archivo raíz relevante.
+4. Identifica la estructura real del sitio.
+5. Confirma cuántos grupos de páginas existen realmente.
+
+La estructura esperada contiene aproximadamente:
+
+- 20 grupos de páginas;
+- 10 idiomas;
+- aproximadamente 200 HTML.
+
+Idiomas:
+
+- EN
+- ES
+- FR
+- IT
+- DE
+- NL
+- PT
+- CA/CAT
+- SV
+- PL
+
+NO asumas que los 200 HTML están presentes.
+
+Compruébalo.
+
+---
+
+# PASO 2 — INTEGRIDAD DEL PAQUETE
+
+Comprueba:
+
+- archivos duplicados;
+- rutas duplicadas;
+- archivos vacíos;
+- archivos truncados;
+- referencias a archivos inexistentes;
+- referencias a versiones antiguas;
+- recursos huérfanos;
+- rutas relativas incorrectas;
+- rutas absolutas incorrectas;
+- mayúsculas/minúsculas que puedan fallar en Linux;
+- codificación;
+- BOM;
+- caracteres rotos;
+- HTML corrupto;
+- JSON no válido;
+- JSON-LD no válido;
+- XML no válido;
+- sitemaps incoherentes;
+- referencias cruzadas entre archivos.
+
+Comprueba específicamente que el ZIP sea internamente autosuficiente para sustituir la web.
+
+---
+
+# PASO 3 — AUDITORÍA HTML COMPLETA
+
+Audita TODOS los HTML.
+
+No hagas únicamente muestreo salvo que exista una limitación técnica real.
+
+En ese caso:
+
+1. indica la limitación;
+2. especifica qué archivos sí fueron analizados;
+3. especifica cuáles no;
+4. no extrapoles conclusiones no verificadas.
+
+Comprueba:
+
+- `<!doctype html>`;
+- `<html lang>`;
+- `<head>`;
+- charset;
+- viewport;
+- `<title>`;
+- meta description;
+- robots meta;
+- canonical;
+- hreflang;
+- x-default;
+- Open Graph;
+- Twitter Cards;
+- headings;
+- H1;
+- jerarquía H2-H6;
+- etiquetas mal cerradas;
+- etiquetas huérfanas;
+- sections;
+- articles;
+- nav;
+- main;
+- header;
+- footer;
+- IDs duplicados;
+- enlaces internos;
+- enlaces externos;
+- anchors;
+- aria;
+- labels;
+- formularios;
+- accesibilidad técnica relevante;
+- HTML semántico;
+- contenido oculto;
+- enlaces no rastreables;
+- errores estructurales.
+
+Busca también errores que las auditorías anteriores pudieran haber pasado por alto.
+
+---
+
+# PASO 4 — COHERENCIA MULTILINGÜE
+
+Compara sistemáticamente las páginas equivalentes entre los 10 idiomas.
+
+Para cada grupo:
+
+- HOME
+- PRICES
+- SCOOTER
+- ROLLERBLADES
+- BIKE
+- QUADS
+- SKATEBOARD
+- LONGBOARD
+- LOCATION\_CONTACT
+- BLOGS
+- y cualquier otro grupo realmente existente
+
+compara:
+
+- estructura;
+- navegación;
+- enlaces;
+- títulos;
+- descriptions;
+- canonical;
+- hreflang;
+- x-default;
+- Open Graph;
+- Twitter;
+- imágenes;
+- precios;
+- servicios;
+- políticas comerciales;
+- dirección;
+- teléfono;
+- email;
+- horarios;
+- depósitos;
+- reservas;
+- permisos;
+- contenido;
+- FAQs;
+- Schema;
+- breadcrumbs;
+- fechas;
+- author;
+- publisher;
+- entidades.
+
+No consideres error una traducción diferente simplemente porque las frases no sean literales.
+
+Busca diferencias SEMÁNTICAS reales.
+
+---
+
+# DATOS DE NEGOCIO CANÓNICOS FACILITADOS POR EL PROPIETARIO
+
+Usa estos datos como referencia empresarial autorizada para detectar contradicciones:
+
+Empresa:
+
+`RSB Rental Scooter Barcelona`
+
+Ubicación:
+
+Vila Olímpica / Port Olímpic, Barcelona.
+
+Teléfono:
+
+`+34 640 559 468`
+
+Email:
+
+`info@rentalscooterbarcelona.com`
+
+Servicios principales:
+
+- scooters de gasolina 50cc;
+- scooters de gasolina 125cc;
+- bicicletas;
+- patines en línea;
+- patines clásicos;
+- quads;
+- skateboards;
+- longboards;
+- tours de patinaje.
+
+NO ofrece:
+
+- e-scooters;
+- e-bikes.
+
+Política de reserva:
+
+- 30 % para confirmar mediante transferencia;
+- 70 % restante al recoger.
+
+Depósito:
+
+- scooters: depósito;
+- bicicletas: sin depósito;
+- patines en línea: sin depósito;
+- patines clásicos: sin depósito;
+- skateboards: sin depósito;
+- longboards: sin depósito.
+
+Depósito de referencia para scooters:
+
+`250 €`
+
+Radio de servicio indicado:
+
+`25 km`
+
+Si el ZIP contradice estos datos, señálalo.
+
+No modifiques nada.
+
+---
+
+# PASO 5 — SEO INTERNACIONAL
+
+Audita completamente:
+
+- hreflang;
+- reciprocidad hreflang;
+- URLs válidas;
+- idiomas correctos;
+- `x-default`;
+- self-reference;
+- canonical;
+- relación canonical/hreflang;
+- códigos lingüísticos;
+- CA/CAT;
+- posibles errores de locale;
+- traducciones de URL;
+- enlaces entre idiomas;
+- selector de idioma;
+- sitemap multilingüe.
+
+Comprueba todos los pares, no solo ejemplos.
+
+Detecta:
+
+- hreflang a URLs inexistentes;
+- relaciones incompletas;
+- URL equivocada;
+- página de idioma incorrecto;
+- canonical apuntando a otro idioma sin motivo;
+- inconsistencias entre sitemap y HTML.
+
+Contrasta con la documentación ACTUAL de Google Search Central.
+
+---
+
+# PASO 6 — CANONICALIZACIÓN
+
+Comprueba todos los canonical.
+
+Cruza:
+
+- canonical HTML;
+- sitemap;
+- hreflang;
+- Open Graph URL;
+- JSON-LD URL;
+- WebPage @id;
+- BreadcrumbList;
+- enlaces internos.
+
+Busca señales contradictorias de canonicalización.
+
+No marques como error una variación meramente estética si no genera una contradicción real.
+
+Consulta la documentación oficial ACTUAL de Google.
+
+---
+
+# PASO 7 — JSON-LD / SCHEMA.ORG
+
+Parsea y analiza todos los:
+
+`<script type="application/ld+json">`
+
+Comprueba que sean JSON válido.
+
+NO consideres error que existan varios bloques JSON-LD.
+
+Tener dos scripts JSON-LD NO constituye por sí mismo un problema.
+
+Busca contradicciones reales.
+
+Audita especialmente:
+
+- Organization;
+- LocalBusiness;
+- WebSite;
+- WebPage;
+- Service;
+- BlogPosting;
+- Article;
+- BreadcrumbList;
+- FAQPage;
+- AggregateRating;
+- Review;
+- PostalAddress;
+- GeoCoordinates;
+- ContactPoint;
+- Offer;
+- provider;
+- author;
+- publisher.
+
+Comprueba:
+
+- `@id`;
+- `@type`;
+- `url`;
+- `name`;
+- `alternateName`;
+- `description`;
+- `image`;
+- `logo`;
+- `telephone`;
+- `email`;
+- `address`;
+- `geo`;
+- `sameAs`;
+- `provider`;
+- `author`;
+- `publisher`;
+- `datePublished`;
+- `dateModified`;
+- breadcrumbs.
+
+Busca especialmente casos donde:
+
+LA MISMA ENTIDAD CON EL MISMO `@id`
+
+aparezca varias veces con valores incompatibles.
+
+Comprueba coherencia JSON-LD ↔ contenido visible.
+
+Consulta:
+
+- Schema.org;
+- Google Search Central;
+- documentación oficial aplicable.
+
+No propongas propiedades simplemente porque Schema.org permita añadirlas.
+
+Distingue entre:
+
+- obligatorio;
+- recomendado;
+- opcional;
+- irrelevante.
+
+---
+
+# PASO 8 — AUDITORÍA COMPLETA DE IMÁGENES
+
+Esta parte es MUY IMPORTANTE.
+
+Inventaría todas las imágenes físicas presentes en el ZIP.
+
+Cruza cada imagen con sus usos en HTML, CSS, preload y datos estructurados.
+
+Comprueba:
+
+## Existencia
+
+- imágenes referenciadas pero inexistentes;
+- imágenes presentes pero nunca utilizadas;
+- duplicados;
+- variantes innecesarias;
+- nombres incoherentes.
+
+## SRC
+
+- `src`;
+- rutas;
+- dominios;
+- recursos inexistentes;
+- URLs antiguas;
+- recursos de otro servicio/página.
+
+## SRCSET
+
+Analiza TODOS los `srcset`.
+
+Comprueba:
+
+- candidato 480w;
+- 720w;
+- 800w;
+- 1200w;
+- 1600w;
+- cualquier otro descriptor;
+- misma imagen utilizada con dos anchuras falsas;
+- descriptor que no corresponda al recurso;
+- URL repetida;
+- candidato inexistente;
+- orden;
+- relación con `sizes`.
+
+## DIMENSIONES
+
+Cuando sea técnicamente posible, lee las dimensiones intrínsecas REALES de los archivos.
+
+Cruza:
+
+dimensión física de la imagen
+
+vs.
+
+- `width`;
+- `height`;
+- descriptor `w`;
+- CSS;
+- relación de aspecto.
+
+NO INVENTES dimensiones.
+
+Si no puedes leerlas realmente, marca:
+
+`NO VERIFICADO`.
+
+## SEO DE IMÁGENES
+
+Comprueba:
+
+- alt;
+- alt vacío cuando corresponda;
+- alt incorrecto;
+- nombres de archivo;
+- contexto textual;
+- imágenes relevantes;
+- imágenes rastreables;
+- URLs indexables;
+- datos estructurados;
+- sitemap de imágenes si procede.
+
+Consulta específicamente la documentación actual de:
+
+Google Image SEO.
+
+## RENDIMIENTO
+
+Revisa:
+
+- imágenes hero;
+- imágenes LCP probables;
+- preload;
+- `fetchpriority`;
+- lazy loading;
+- `loading`;
+- `decoding`;
+- recursos duplicados;
+- imágenes excesivamente grandes;
+- posible CLS por ausencia de dimensiones;
+- aspect ratio;
+- formatos modernos.
+
+No conviertas automáticamente una recomendación de rendimiento en ERROR SEO.
+
+---
+
+# PASO 9 — GOOGLE SEARCH
+
+Investiga la documentación oficial ACTUAL de Google.
+
+Prioriza:
+
+`developers.google.com/search/`
+
+Comprueba el ZIP frente a las recomendaciones vigentes sobre:
+
+- crawling;
+- indexing;
+- canonicalization;
+- international SEO;
+- hreflang;
+- sitemaps;
+- robots;
+- robots meta;
+- structured data;
+- image SEO;
+- links;
+- JavaScript;
+- mobile;
+- spam policies;
+- helpful content;
+- snippets;
+- local business cuando sea aplicable.
+
+No utilices límites SEO antiguos como reglas absolutas si Google no los define como tales.
+
+Por ejemplo:
+
+NO declares automáticamente un title de más de X caracteres como error si no existe una regla oficial de Google que lo convierta en error.
+
+Puedes clasificarlo como mejora si existe una razón demostrable.
+
+---
+
+# PASO 10 — BING Y MICROSOFT
+
+Investiga las directrices OFICIALES más recientes de:
+
+- Bing Webmaster Tools;
+- Microsoft;
+- Bing Search;
+- IndexNow;
+- Copilot / AI Search cuando exista documentación oficial aplicable.
+
+Comprueba:
+
+- crawlability;
+- indexación;
+- sitemaps;
+- IndexNow;
+- canonical;
+- contenido;
+- HTML;
+- headings;
+- imágenes;
+- structured data;
+- entidades;
+- claridad del contenido;
+- grounding;
+- elegibilidad para citas;
+- Microsoft Copilot;
+- Search/AI visibility.
+
+No inventes requisitos.
+
+Distingue claramente:
+
+- requisito;
+- recomendación;
+- oportunidad.
+
+---
+
+# PASO 11 — IA / GEO / ANSWER ENGINES
+
+Analiza la preparación del sitio para:
+
+- Google AI experiences;
+- Bing Copilot;
+- sistemas de búsqueda generativa;
+- LLM grounding;
+- respuestas con citas.
+
+Comprueba especialmente:
+
+- claridad de entidades;
+- empresa;
+- servicios;
+- ubicación;
+- precios;
+- políticas;
+- preguntas frecuentes;
+- autoría;
+- fechas;
+- información verificable;
+- estructura semántica;
+- consistencia empresarial;
+- contenido autosuficiente;
+- páginas centradas en una intención;
+- enlazado;
+- datos estructurados;
+- archivos `llms.txt` o equivalentes si existen.
+
+IMPORTANTE:
+
+No presentes “GEO” como una ciencia con factores de ranking garantizados.
+
+Distingue evidencia oficial de hipótesis o prácticas emergentes.
+
+---
+
+# PASO 12 — ARCHIVOS RAÍZ
+
+Audita todos los archivos relevantes de raíz.
+
+Especialmente:
+
+- `.htaccess`;
+- robots.txt;
+- sitemap.xml;
+- sitemap index;
+- sitemaps por idioma;
+- llms.txt;
+- agents;
+- JSON;
+- manifests;
+- verification files;
+- redirects;
+- configuración;
+- CSP si existe;
+- headers configurados desde archivos presentes;
+- archivos de Bing;
+- archivos de Google;
+- cualquier archivo Yandex si existe;
+- archivos obsoletos.
+
+Comprueba coherencia entre ellos y los 200 HTML.
+
+---
+
+# PASO 13 — SITEMAPS
+
+Comprueba:
+
+- XML válido;
+- URLs existentes;
+- únicamente URLs canónicas;
+- idiomas;
+- rutas;
+- duplicados;
+- URLs huérfanas;
+- páginas omitidas;
+- lastmod;
+- coherencia con las fechas reales disponibles;
+- consistencia con canonical;
+- consistencia con hreflang si se emplea;
+- referencias al sitemap desde robots.txt.
+
+No inventes fechas.
+
+---
+
+# PASO 14 — ROBOTS E INDEXABILIDAD
+
+Comprueba:
+
+- robots.txt;
+- meta robots;
+- X-Robots cuando pueda deducirse de configuración incluida;
+- noindex;
+- nofollow;
+- bloqueos accidentales;
+- recursos CSS/JS bloqueados;
+- imágenes bloqueadas;
+- sitemap declarado;
+- crawlers relevantes.
+
+No confundas `robots.txt` con mecanismo de desindexación.
+
+---
+
+# PASO 15 — ENLAZADO INTERNO
+
+Construye, cuando sea posible, un mapa de enlaces internos.
+
+Detecta:
+
+- enlaces a rutas inexistentes;
+- 404 previsibles;
+- enlaces a idioma equivocado;
+- enlaces a antiguas rutas;
+- enlaces a `/es/` desde otra lengua sin motivo;
+- enlaces absolutos/relativos inconsistentes;
+- páginas huérfanas;
+- bucles;
+- anchors inexistentes;
+- navegación incoherente.
+
+---
+
+# PASO 16 — CONTENIDO Y COHERENCIA COMERCIAL
+
+Compara todas las páginas donde aparezcan:
+
+- precios;
+- depósitos;
+- horarios;
+- reservas;
+- scooters;
+- bicicletas;
+- patines;
+- quads;
+- skateboards;
+- longboards;
+- entrega;
+- permisos;
+- edad;
+- ubicación;
+- contacto;
+- promociones.
+
+Busca contradicciones tanto:
+
+- dentro del mismo idioma;
+- entre idiomas;
+- entre contenido visible y Schema;
+- entre páginas de servicio y blog.
+
+---
+
+# PASO 17 — BLOGS
+
+Comprueba todos los blogs.
+
+Especialmente:
+
+- Article / BlogPosting;
+- author;
+- publisher;
+- Organization;
+- fechas;
+- breadcrumb;
+- canonical;
+- hreflang;
+- imágenes;
+- links;
+- contenido duplicado;
+- idioma;
+- enlaces a otros artículos;
+- relación con servicios comerciales.
+
+---
+
+# PASO 18 — CSS Y JAVASCRIPT
+
+Revisa los recursos incluidos.
+
+Busca:
+
+- archivos inexistentes;
+- enlaces rotos;
+- referencias antiguas;
+- errores evidentes;
+- CSS duplicado;
+- selectores utilizados de forma incoherente;
+- recursos bloqueantes importantes;
+- scripts duplicados;
+- URLs HTTP;
+- errores potenciales de CSP;
+- recursos externos;
+- dependencias inexistentes.
+
+No hagas refactor.
+
+No conviertas una preferencia arquitectónica en error.
+
+---
+
+# PASO 19 — SEGURIDAD Y CALIDAD TÉCNICA
+
+Sin realizar ataques ni pruebas invasivas, revisa estáticamente:
+
+- mixed content;
+- HTTP dentro de HTTPS;
+- target=\_blank sin protección cuando proceda;
+- CSP presente en archivos;
+- integrity;
+- recursos externos;
+- formularios;
+- exposición accidental de datos;
+- comentarios sensibles;
+- archivos temporales;
+- backups;
+- ficheros `.bak`;
+- credenciales o claves expuestas.
+
+Si detectas secretos reales:
+
+NO los reproduzcas completos en el informe.
+
+---
+
+# PASO 20 — PRODUCCIÓN ACTUAL
+
+Puedes comparar selectivamente:
+
+`https://rentalscooterbarcelona.com/`
+
+con el ZIP.
+
+El objetivo es detectar:
+
+- qué cambiará al desplegar;
+- regresiones;
+- recursos actuales que faltarían en el ZIP;
+- redirecciones;
+- comportamiento HTTP;
+- www ↔ non-www;
+- HTTPS;
+- páginas actuales que desaparecerían;
+- URLs indexadas potencialmente afectadas.
+
+Pero recuerda:
+
+EL ZIP ES EL CANDIDATO DE PRODUCCIÓN.
+
+La web pública actual NO es fuente de verdad sobre el contenido del ZIP.
+
+---
+
+# FUENTES EXTERNAS
+
+Para cualquier recomendación SEO utiliza prioritariamente fuentes oficiales y ACTUALES.
+
+Orden de prioridad:
+
+1. Google Search Central / Google Developers
+2. Bing Webmaster / Microsoft
+3. Schema.org
+4. WHATWG / W3C
+5. web.dev / Chrome cuando corresponda
+6. OpenAI únicamente para aspectos realmente relacionados con OpenAI
+7. otras fuentes especializadas solo como apoyo
+
+No utilices blogs SEO comerciales para declarar un ERROR cuando la documentación oficial no lo respalde.
+
+---
+
+# CLASIFICACIÓN OBLIGATORIA
+
+Cada hallazgo debe pertenecer a UNA categoría:
+
+## A — ERROR DEMOSTRADO
+
+Existe evidencia concreta en el ZIP de que algo está mal.
+
+## B — INCOHERENCIA DEMOSTRADA
+
+Dos o más elementos del propio sitio se contradicen.
+
+## C — REGRESIÓN DEMOSTRADA
+
+Existe evidencia de que una versión nueva ha perdido una condición necesaria respecto a una versión válida o respecto a producción.
+
+## D — MEJORA RECOMENDADA
+
+No es un error, pero existe una optimización razonable respaldada por documentación.
+
+## E — REQUIERE CONFIRMACIÓN DEL PROPIETARIO
+
+No se puede decidir correctamente sin un dato empresarial/editorial.
+
+## F — NO VERIFICABLE
+
+La herramienta no dispone de evidencia suficiente.
+
+## G — CORRECTO / SIN ACCIÓN
+
+Elemento comprobado y coherente.
+
+---
+
+# PRIORIDADES
+
+Además asigna:
+
+- CRÍTICA
+- ALTA
+- MEDIA
+- BAJA
+- MEJORA
+
+No abuses de CRÍTICA o ALTA.
+
+---
+
+# EVIDENCIA OBLIGATORIA
+
+No acepto afirmaciones vagas.
+
+Para cada ERROR o INCOHERENCIA indica:
+
+1. ruta exacta del archivo;
+2. idioma;
+3. página;
+4. elemento;
+5. valor actual;
+6. valor contradictorio o esperado;
+7. fragmento relevante;
+8. por qué es incorrecto;
+9. fuente oficial cuando corresponda;
+10. solución recomendada;
+11. nivel de confianza.
+
+Ejemplo del nivel de precisión esperado:
+
+NO:
+
+“Hay problemas en srcset.”
+
+SÍ:
+
+`07_SKATEBOARD/pt/index.html`
+
+Atributo:
+
+`srcset`
+
+Valor A:
+
+`...imagen-800.webp 800w`
+
+Valor B:
+
+`...imagen-800.webp 1200w`
+
+Problema:
+
+La misma URL se declara con dos descriptores de anchura incompatibles.
+
+---
+
+# NO QUIERO FALSOS POSITIVOS
+
+Incluye obligatoriamente una sección:
+
+# PUNTOS ANALIZADOS QUE NO SON ERRORES
+
+Incluye allí elementos que investigaste pero que no deben modificarse.
+
+Esto es importante para evitar que futuras auditorías vuelvan a proponer los mismos cambios.
+
+---
+
+# COMPROBACIÓN CRUZADA
+
+Cuando detectes un problema:
+
+NO lo informes inmediatamente como cierto.
+
+Antes:
+
+1. comprueba el mismo elemento en otros idiomas;
+2. busca patrones equivalentes;
+3. comprueba archivos relacionados;
+4. contrasta con documentación;
+5. determina si es realmente error;
+6. solo entonces incorpóralo al informe definitivo.
+
+---
+
+# REPETICIONES
+
+Si el mismo error aparece en muchos archivos:
+
+- identifica el patrón común;
+- cuenta exactamente los archivos;
+- enumera TODAS las rutas afectadas;
+- no digas simplemente “varios archivos”.
+
+---
+
+# RESULTADO QUE QUIERO
+
+Produce un informe final dividido así:
+
+## 1. RESUMEN EJECUTIVO
+
+- estado general;
+- apto/no apto para producción;
+- número total de errores demostrados;
+- críticos;
+- altos;
+- medios;
+- bajos;
+- mejoras;
+- pendientes de propietario.
+
+## 2. INVENTARIO DEL ZIP
+
+Tabla completa por tipos de archivo.
+
+## 3. MATRIZ MAESTRA DE HALLAZGOS
+
+Columnas:
+
+`ID | Prioridad | Clasificación | Grupo | Idioma | Archivo | Categoría | Hallazgo | Evidencia | Impacto | Corrección | Fuente | Confianza`
+
+## 4. ERRORES CRÍTICOS
+
+## 5. ERRORES ALTOS
+
+## 6. ERRORES MEDIOS
+
+## 7. ERRORES BAJOS
+
+## 8. COHERENCIA MULTILINGÜE
+
+## 9. SEO GOOGLE
+
+## 10. SEO BING / MICROSOFT / COPILOT
+
+## 11. IA / GEO / GROUNDING
+
+## 12. DATOS ESTRUCTURADOS
+
+## 13. IMÁGENES
+
+## 14. HREFLANG / CANONICAL
+
+## 15. SITEMAPS / ROBOTS
+
+## 16. ENLAZADO INTERNO
+
+## 17. CONTENIDO Y DATOS COMERCIALES
+
+## 18. BLOGS
+
+## 19. CSS / JAVASCRIPT
+
+## 20. ARCHIVOS RAÍZ Y CONFIGURACIÓN
+
+## 21. ACCESIBILIDAD TÉCNICA
+
+## 22. RENDIMIENTO / CWV — SOLO LO QUE PUEDA DEMOSTRARSE
+
+## 23. SEGURIDAD ESTÁTICA
+
+## 24. COMPARACIÓN CON PRODUCCIÓN
+
+## 25. MEJORAS OPCIONALES
+
+## 26. DATOS QUE DEBO CONFIRMAR CON EL PROPIETARIO
+
+## 27. PUNTOS ANALIZADOS QUE NO SON ERRORES
+
+## 28. PÁGINAS SIN ERRORES DEMOSTRADOS
+
+## 29. PLAN DE CORRECCIÓN POR FASES
+
+Ordena las futuras correcciones para minimizar el riesgo de regresiones.
+
+## 30. CHECKLIST PREVIO A SUBIR AL SERVIDOR
+
+Debe terminar con una conclusión inequívoca:
+
+### APTO PARA PRODUCCIÓN
+
+o
+
+### NO APTO TODAVÍA
+
+y explicar exactamente por qué.
+
+---
+
+# IMPORTANTE SOBRE LAS CORRECCIONES
+
+EN ESTA INVESTIGACIÓN:
+
+NO modifiques el ZIP.
+
+NO generes HTML corregidos.
+
+NO reescribas archivos.
+
+NO hagas refactor.
+
+NO prepares todavía un ZIP nuevo.
+
+Primero quiero conocer TODOS LOS ERRORES DEMOSTRADOS.
+
+Después las correcciones se harán en fases controladas independientes.
+
+---
+
+# AUDITORÍA DE AUSENCIAS
+
+No busques solo cosas incorrectas.
+
+Busca también cosas que DEBERÍAN existir según la propia arquitectura del sitio pero falten accidentalmente.
+
+Ejemplos:
+
+- idioma omitido;
+- canonical ausente;
+- hreflang ausente;
+- imagen variante ausente;
+- sitemap sin URL;
+- JSON-LD faltante respecto a las páginas equivalentes;
+- navegación diferente accidentalmente;
+- artículo que no aparece enlazado;
+- archivo requerido por una referencia pero ausente del ZIP.
+
+Pero no conviertas diferencias intencionales en errores sin evidencia.
+
+---
+
+# BÚSQUEDA DE ERRORES NO PREVISTOS
+
+Además de todo lo anterior:
+
+NO te limites a esta lista.
+
+Busca anomalías adicionales que puedan afectar:
+
+- SEO;
+- indexación;
+- rastreo;
+- UX;
+- accesibilidad;
+- rendimiento;
+- imágenes;
+- consistencia;
+- seguridad;
+- IA;
+- Google;
+- Bing;
+- producción.
+
+Pero conserva siempre la regla:
+
+**UN HALLAZGO SOLO ES “ERROR” SI PUEDES DEMOSTRARLO.**
+
+---
+
+# INVESTIGACIÓN ACTUALIZADA
+
+Consulta documentación disponible EN EL MOMENTO DE ESTA AUDITORÍA.
+
+No confíes únicamente en conocimiento memorizado.
+
+Comprueba las directrices vigentes de Google, Bing/Microsoft, Schema.org y otros estándares antes de hacer recomendaciones.
+
+Incluye enlaces y citas a las fuentes utilizadas.
+
+---
+
+# CONDICIÓN FINAL DE CALIDAD
+
+Antes de finalizar el informe:
+
+revisa tus propios hallazgos una segunda vez.
+
+Intenta refutar cada ERROR que hayas identificado.
+
+Si después de esa segunda comprobación la evidencia no es suficientemente sólida:
+
+rebájalo a:
+
+- mejora;
+- requiere confirmación;
+- no verificable.
+
+El objetivo no es encontrar muchos problemas.
+
+El objetivo es encontrar **los problemas reales que quedan antes de sustituir la web de producción por este ZIP**.
