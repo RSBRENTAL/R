@@ -1,21 +1,15 @@
 # EN — Inglés: correcciones por página
 
-## Decisiones del propietario aplicadas
-- Reseñas canónicas: **226**. No usar 222.
-- Google Maps API: **restringida**; no modificar la key por ser visible en cliente.
-- Sin depósito: bicicletas, patines en línea, patines clásicos, skateboards y longboards.
-- Radio de servicio: **25 km**.
-- No se ofrecen **e-scooters** ni **e-bikes**.
-
-- RECTIFICACIÓN: el esquema 30 % + 70 % no existe y queda anulado; no usarlo como corrección.
-- RECTIFICACIÓN: 250 € de depósito es un dato de una reseña de cliente, no una política oficial; no usarlo como dato canónico.
-- No convertir anécdotas de reseñas (playa, toallas, bañador, importes, depósitos, etc.) en hechos o contenido oficial sin fuente RSB independiente.
-
-## Reglas
-- La única corrección técnica de código transversal demostrada por la auditoría forense es la relación `width/height` de imágenes.
+## Reglas operativas vigentes
+- La corrección técnica de código autorizada en esta fase es la relación `width/height` de las imágenes listadas.
+- Aplicar exactamente `02_ERRORES_DIMENSIONES_IMAGENES.csv`.
 - No modificar `srcset` de forma masiva.
-- Los hallazgos RSB-003 quedan como verificación externa ya confirmada por el propietario, sin cambio HTML.
-- Para EN, RSB-008 queda resuelto por decisión del propietario: mantener 226.
+- Google Maps: sin cambio HTML; la restricción de la API está confirmada por el propietario.
+- Mantener 226 reseñas donde ya exista; no sustituir por 222.
+- No realizar correcciones de texto comercial, precios, depósitos, servicios, licencias, titles, descriptions, FAQs, Schema, canonical o hreflang salvo autorización expresa distinta.
+- Para reglas empresariales, usar únicamente `AUDITORIA_COMPARTIDA/DATOS_CANONICOS_PROPIETARIO.md`.
+- Documentos históricos o reseñas de clientes no son fuente de políticas empresariales.
+- Si aparece una contradicción empresarial no resuelta, marcar `PENDIENTE DE CONFIRMACIÓN DEL PROPIETARIO`; no inventar la solución.
 
 ## Páginas
 ### BIKE — `bike/index.html`
@@ -138,3 +132,4 @@
   1. `rsb-skateboard-rental-barcelona-hero-group-beach-1600-v1.webp`: `1600×900` → `1600×1066`.
   2. `rsb-skateboard-rental-barcelona-vila-olimpica-800.webp`: `1200×675` → `800×360`.
   3. `rsb-bike-rental-shop-olympic-village-barcelona.webp`: `1200×675` → `480×720`.
+

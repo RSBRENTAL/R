@@ -1,49 +1,66 @@
-CORRIGE UNIQUEMENT LES 20 PAGES EN FRANÇAIS DU DÉPÔT GITHUB `RSBRENTAL/R`, BRANCHE `main`, DOSSIER `IDIOMAS/FR/`.
+CORRIGE ÚNICAMENTE LAS 20 PÁGINAS DEL IDIOMA FR (Francés) DEL REPOSITORIO GITHUB `RSBRENTAL/R`.
 
-- L’unique source de code pour ce travail est `RSBRENTAL/R` → `main` → `IDIOMAS/FR/PAGINAS_REPO/`.
-- Exclusive workspace: `IDIOMAS/FR/`. Do not inspect, modify, or use `IDIOMAS/*` from any other language except to verify a cross-language invariant explicitly required by the listed correction.
-SOURCE ET PÉRIMÈTRE
-- Lis TOUS les fichiers de `IDIOMAS/FR/` du début à la fin avant toute modification. N’utilise aucun autre dossier linguistique comme substitut.
-- La source du code est `RSBRENTAL/R` → `main` → `IDIOMAS/FR/PAGINAS_REPO/`.
-- Ton périmètre exclusif correspond aux 20 routes de `IDIOMAS/FR/04_MANIFEST_20_PAGINAS_SHA256.csv`.
-- Ne modifie aucune page d’une autre langue ni les fichiers partagés à la racine, CSS, JS, JSON, XML, images physiques ou configuration.
+FUENTE Y ALCANCE
+- Parte del `main` actual.
+- Workspace exclusivo: `IDIOMAS/FR/`.
+- Código autorizado: `IDIOMAS/FR/PAGINAS_REPO/`.
+- Alcance exacto: las 20 rutas de `IDIOMAS/FR/04_MANIFEST_20_PAGINAS_SHA256.csv`.
+- No inspecciones ni modifiques carpetas de otros idiomas salvo una comprobación cruzada imprescindible y expresamente requerida por una incidencia.
+- No uses la web pública como fuente para reescribir el candidato.
 
-CORRECTIONS
-1. Lis entièrement `IDIOMAS/FR/01_CORRECCIONES_POR_PAGINA.md`.
-2. Applique TOUTES les lignes de `IDIOMAS/FR/02_ERRORES_DIMENSIONES_IMAGENES.csv`.
-3. Pour chaque incidence d’image, modifie uniquement `width` et `height` du `<img>` concerné afin qu’ils correspondent aux dimensions physiques vérifiées.
-4. NE modifie PAS `src`, `srcset`, `sizes`, les noms, formats, compression ni les fichiers image physiques. L’audit n’a pas trouvé de problème général de descripteurs `srcset`.
-5. RSB-003 / Google Maps : le propriétaire confirme que la clé API est restreinte. Ne la modifie ni ne la supprime simplement parce qu’elle est visible côté client.
-6. Avis : la valeur canonique est 226. Ne la remplace pas par 222.
-- Le schéma de réservation 30 % + 70 % N’EXISTE PAS et est annulé. Ne l’utilise pas, ne corrige aucune page vers ce schéma et ne le traite pas comme un fait officiel. Le montant de 250 € de caution provient d’un avis client et N’EST PAS une politique officielle de RSB ; ne l’utilise pas comme donnée canonique et ne l’insère pas sur le site.
-- Règle sur les avis clients : les anecdotes racontées par des clients NE constituent PAS des politiques officielles ni des faits commerciaux de RSB. Ne transforme pas en contenu du site des détails d’avis sur des cautions, montants, plage, serviettes, maillot de bain ou faits similaires sans confirmation indépendante par une source officielle RSB.
-8. Ne modifie pas canonical, hreflang, x-default, URLs, Open Graph URL, JSON-LD URL, breadcrumbs, titres, descriptions, liens, dates ou contenu sans rapport sauf correction explicitement listée.
-9. Aucun refactor, redesign ou amélioration optionnelle.
+LEE ÚNICAMENTE ESTOS ARCHIVOS DE CONTROL ANTES DE MODIFICAR
+1. `AUDITORIA_COMPARTIDA/DATOS_CANONICOS_PROPIETARIO.md`.
+2. `AUDITORIA_COMPARTIDA/DECISIONES_OPERATIVAS.md`.
+3. `IDIOMAS/FR/01_CORRECCIONES_POR_PAGINA.md`.
+4. `IDIOMAS/FR/02_ERRORES_DIMENSIONES_IMAGENES.csv`.
+5. `IDIOMAS/FR/04_MANIFEST_20_PAGINAS_SHA256.csv`.
+6. Los 20 HTML autorizados.
+- `00_AUDITORIA_NO_IMAGEN_ORIGINAL.csv` es evidencia histórica, no una orden de corrección.
+- `03_CORRECCIONES_OPERATIVAS_20_PAGINAS.csv` es matriz auxiliar técnica, no una fuente empresarial.
 
-VALIDATION OBLIGATOIRE
-- Conserver exactement 20 HTML français.
-- Vérifier les 20 routes une par une.
-- 0 erreur de ratio `width/height` listée restante.
-- 0 nouvelle référence d’image cassée.
-- 0 changement de canonical/hreflang/x-default par rapport à l’original.
-- La valeur 226 reste inchangée là où elle existe.
-- Aucun fichier hors des 20 routes autorisées n’est modifié.
+CORRECCIÓN AUTORIZADA
+1. Aplica TODAS las filas de `02_ERRORES_DIMENSIONES_IMAGENES.csv`.
+2. Para cada incidencia cambia únicamente `width` y `height` del `<img>` afectado para que coincidan con las dimensiones físicas verificadas indicadas.
+3. NO cambies `src`, `srcset`, `sizes`, nombres de archivo, formatos, compresión ni imágenes físicas.
+4. La auditoría no detectó un fallo general de `srcset`: no hagas sustituciones masivas.
+5. Google Maps: la key está restringida según confirmación del propietario. No la cambies ni la elimines por ser visible en cliente.
+6. Reseñas: conserva 226 donde ya exista. No cambies a 222 y no insertes 226 donde no exista.
+7. Respeta las reglas empresariales del archivo compartido únicamente para detectar contradicciones. No conviertas esas reglas en una orden para añadir o reordenar contenido.
+8. Scooter + Inline Skates / Rollerblades son prioridad empresarial, pero NO debes reordenar ni modificar HTML, SEO, Schema, navegación, titles, descriptions o headings por esa razón.
+9. `/quads/` / `QUADS` corresponde a Roller Skates / patines clásicos de cuatro ruedas; no lo interpretes como vehículos quad.
+10. Depósito solo Scooter; sin depósito en Inline Skates / Rollerblades, Bike, Roller Skates, Skateboard y Longboard. No insertes esa información en páginas que no traten el tema.
+11. Una reseña de cliente no es fuente de políticas, precios, depósitos, servicios, equipamiento ni condiciones empresariales.
+12. Si aparece un dato empresarial no confirmado, NO lo corrijas: repórtalo como `PENDIENTE DE CONFIRMACIÓN DEL PROPIETARIO`.
+13. No alteres canonical, hreflang, x-default, URLs, Open Graph URL, JSON-LD URL, breadcrumbs, titles, descriptions, FAQs, enlaces, fechas, precios, licencias, servicios ni texto visible salvo una corrección exacta y autorizada.
+14. No hagas refactor, rediseño ni mejoras opcionales.
 
-FLUX GITHUB OBLIGATOIRE
-1. Pars du `main` actuel et crée/utilise la branche `correcciones/fr`. Ne commit JAMAIS les corrections directement sur `main`.
-2. Applique uniquement les modifications autorisées aux 20 HTML français dans cette branche.
-3. Commit les HTML corrigés avec un message clair, par exemple `Correcciones FR: auditoría RSB`.
-4. Ouvre une Pull Request de `correcciones/fr` vers `main`. NE la fusionne PAS. Le propriétaire fera la révision.
-5. Dans la PR, indique les fichiers modifiés, corrections appliquées, résultats de validation, éventuels points restant et confirme qu’aucun fichier hors périmètre n’a été modifié.
-6. Génère un diff/patch unifié par rapport à `main` nommé `DIFF_FR.patch`.
+VALIDACIÓN OBLIGATORIA
+- Exactamente 20 HTML del idioma FR.
+- Comprueba las 20 rutas una por una.
+- 0 incidencias restantes de `width/height` de las filas listadas.
+- 0 referencias nuevas de imagen rotas.
+- 0 cambios en `src`, `srcset` o `sizes`.
+- 0 cambios en canonical/hreflang/x-default.
+- 226 permanece donde ya existía.
+- 0 archivos modificados fuera de las 20 rutas autorizadas.
+- Compara hashes antes/después e identifica cada archivo realmente cambiado.
 
-LIVRAISON FINALE
-- Génère `RSB_FR_20_HTML_CORRIGES.zip` comme sauvegarde téléchargeable. Ne commit pas ce ZIP dans le dépôt.
-- Le ZIP doit contenir :
-  - les 20 HTML corrigés avec leurs chemins repo d’origine exacts ;
-  - `RAPPORT_MODIFICATIONS_FR.txt` ;
-  - `SHA256_FR_AVANT_APRES.csv` ;
-  - `DIFF_FR.patch` avec les changements exacts par rapport à `main` ;
-  - `GITHUB_PR_FR.txt` avec dépôt, branche, SHA du commit et URL de la Pull Request.
-- À la fin du chat, fournis le lien de téléchargement du ZIP, l’URL de la PR, le nom de la branche et le SHA du commit.
-- Relis ce prompt avant la livraison et vérifie que rien hors périmètre n’a été modifié.
+FLUJO GITHUB OBLIGATORIO
+1. Crea/usa la rama `correcciones/fr` desde el `main` actual. NUNCA hagas las correcciones directamente en `main`.
+2. Modifica únicamente los HTML autorizados.
+3. Haz commit con mensaje claro.
+4. Abre Pull Request `correcciones/fr` → `main`.
+5. NO fusiones el PR.
+6. En la descripción del PR incluye archivos modificados, correcciones, validaciones, pendientes y confirmación de que no hubo cambios fuera de alcance.
+7. Genera `DIFF_FR.patch` respecto a `main`.
+
+ENTREGA FINAL
+- Genera `RSB_FR_20_HTML_CORRIGES.zip` como copia descargable. NO subas el ZIP al repositorio.
+- Debe incluir:
+  - los 20 HTML conservando sus rutas originales;
+  - `RAPPORT_MODIFICATIONS_FR.txt`;
+  - `SHA256_FR_AVANT_APRES.csv`;
+  - `DIFF_FR.patch`;
+  - `GITHUB_PR_FR.txt` con repositorio, rama, SHA del commit y URL del PR.
+- Al final entrega: enlace del ZIP, URL del PR, rama y SHA del commit.
+- Antes de entregar, relee este prompt y confirma que no cambiaste nada fuera del alcance.

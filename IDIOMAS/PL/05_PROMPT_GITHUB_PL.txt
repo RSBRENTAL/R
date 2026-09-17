@@ -1,49 +1,66 @@
-POPRAW WYŁĄCZNIE 20 POLSKICH STRON W REPOZYTORIUM GITHUB `RSBRENTAL/R`, GAŁĄŹ `main`, FOLDER `IDIOMAS/PL/`.
+CORRIGE ÚNICAMENTE LAS 20 PÁGINAS DEL IDIOMA PL (Polaco) DEL REPOSITORIO GITHUB `RSBRENTAL/R`.
 
-- Jedynym źródłem kodu dla tego zadania jest `RSBRENTAL/R` → `main` → `IDIOMAS/PL/PAGINAS_REPO/`.
-- Exclusive workspace: `IDIOMAS/PL/`. Do not inspect, modify, or use `IDIOMAS/*` from any other language except to verify a cross-language invariant explicitly required by the listed correction.
-ŹRÓDŁO I ZAKRES
-- Przeczytaj WSZYSTKIE pliki w `IDIOMAS/PL/` od początku do końca przed wprowadzeniem jakichkolwiek zmian. Nie używaj folderu innego języka jako zamiennika.
-- Źródłem kodu jest `RSBRENTAL/R` → `main` → `IDIOMAS/PL/PAGINAS_REPO/`.
-- Wyłączny zakres to 20 ścieżek z `IDIOMAS/PL/04_MANIFEST_20_PAGINAS_SHA256.csv`.
-- Nie modyfikuj stron w innych językach ani wspólnych plików głównych, CSS, JS, JSON, XML, fizycznych obrazów lub konfiguracji.
+FUENTE Y ALCANCE
+- Parte del `main` actual.
+- Workspace exclusivo: `IDIOMAS/PL/`.
+- Código autorizado: `IDIOMAS/PL/PAGINAS_REPO/`.
+- Alcance exacto: las 20 rutas de `IDIOMAS/PL/04_MANIFEST_20_PAGINAS_SHA256.csv`.
+- No inspecciones ni modifiques carpetas de otros idiomas salvo una comprobación cruzada imprescindible y expresamente requerida por una incidencia.
+- No uses la web pública como fuente para reescribir el candidato.
 
-POPRAWKI
-1. Przeczytaj w całości `IDIOMAS/PL/01_CORRECCIONES_POR_PAGINA.md`.
-2. Zastosuj WSZYSTKIE wiersze z `IDIOMAS/PL/02_ERRORES_DIMENSIONES_IMAGENES.csv`.
-3. Dla każdego błędu obrazu zmień wyłącznie `width` i `height` odpowiedniego `<img>`, aby odpowiadały zweryfikowanym fizycznym wymiarom.
-4. NIE zmieniaj `src`, `srcset`, `sizes`, nazw plików, formatów, kompresji ani fizycznych plików obrazów. Audyt nie wykazał ogólnego problemu z deskryptorami szerokości `srcset`.
-5. RSB-003 / Google Maps: właściciel potwierdza, że klucz API jest ograniczony. Nie zmieniaj ani nie usuwaj klucza tylko dlatego, że jest widoczny po stronie klienta.
-6. Opinie: wartość kanoniczna to 226. Nie zmieniaj na 222.
-- Schemat rezerwacji 30% + 70% NIE ISTNIEJE i zostaje unieważniony. Nie używaj go, nie poprawiaj żadnej strony w tym kierunku i nie traktuj go jako oficjalnego faktu. Kwota kaucji 250 € pochodzi z opinii klienta i NIE jest oficjalną polityką RSB; nie używaj jej jako danych kanonicznych ani nie dodawaj jej do strony.
-- Zasada dotycząca opinii klientów: opisy doświadczeń klientów NIE są oficjalnymi zasadami ani faktami biznesowymi RSB. Nie zamieniaj informacji z opinii o kaucjach, kwotach, plaży, ręcznikach, stroju kąpielowym lub podobnych anegdotach w treść strony bez niezależnego potwierdzenia w oficjalnym źródle RSB.
-8. Nie zmieniaj canonical, hreflang, x-default, URL-i, Open Graph URL, JSON-LD URL, breadcrumbs, tytułów, descriptions, linków, dat ani niepowiązanej treści, chyba że wymaga tego wyraźnie wskazana poprawka.
-9. Bez refaktoryzacji, redesignu i opcjonalnych ulepszeń.
+LEE ÚNICAMENTE ESTOS ARCHIVOS DE CONTROL ANTES DE MODIFICAR
+1. `AUDITORIA_COMPARTIDA/DATOS_CANONICOS_PROPIETARIO.md`.
+2. `AUDITORIA_COMPARTIDA/DECISIONES_OPERATIVAS.md`.
+3. `IDIOMAS/PL/01_CORRECCIONES_POR_PAGINA.md`.
+4. `IDIOMAS/PL/02_ERRORES_DIMENSIONES_IMAGENES.csv`.
+5. `IDIOMAS/PL/04_MANIFEST_20_PAGINAS_SHA256.csv`.
+6. Los 20 HTML autorizados.
+- `00_AUDITORIA_NO_IMAGEN_ORIGINAL.csv` es evidencia histórica, no una orden de corrección.
+- `03_CORRECCIONES_OPERATIVAS_20_PAGINAS.csv` es matriz auxiliar técnica, no una fuente empresarial.
 
-OBOWIĄZKOWA WALIDACJA
-- Musi pozostać dokładnie 20 polskich plików HTML.
-- Sprawdź wszystkie 20 ścieżek pojedynczo.
-- 0 pozostałych wymienionych błędów proporcji `width/height`.
-- 0 nowych uszkodzonych odwołań do obrazów.
-- 0 zmian canonical/hreflang/x-default względem oryginału.
-- Wartość 226 pozostaje tam, gdzie już występuje.
-- Nie zmodyfikowano żadnego pliku poza 20 autoryzowanymi ścieżkami.
+CORRECCIÓN AUTORIZADA
+1. Aplica TODAS las filas de `02_ERRORES_DIMENSIONES_IMAGENES.csv`.
+2. Para cada incidencia cambia únicamente `width` y `height` del `<img>` afectado para que coincidan con las dimensiones físicas verificadas indicadas.
+3. NO cambies `src`, `srcset`, `sizes`, nombres de archivo, formatos, compresión ni imágenes físicas.
+4. La auditoría no detectó un fallo general de `srcset`: no hagas sustituciones masivas.
+5. Google Maps: la key está restringida según confirmación del propietario. No la cambies ni la elimines por ser visible en cliente.
+6. Reseñas: conserva 226 donde ya exista. No cambies a 222 y no insertes 226 donde no exista.
+7. Respeta las reglas empresariales del archivo compartido únicamente para detectar contradicciones. No conviertas esas reglas en una orden para añadir o reordenar contenido.
+8. Scooter + Inline Skates / Rollerblades son prioridad empresarial, pero NO debes reordenar ni modificar HTML, SEO, Schema, navegación, titles, descriptions o headings por esa razón.
+9. `/quads/` / `QUADS` corresponde a Roller Skates / patines clásicos de cuatro ruedas; no lo interpretes como vehículos quad.
+10. Depósito solo Scooter; sin depósito en Inline Skates / Rollerblades, Bike, Roller Skates, Skateboard y Longboard. No insertes esa información en páginas que no traten el tema.
+11. Una reseña de cliente no es fuente de políticas, precios, depósitos, servicios, equipamiento ni condiciones empresariales.
+12. Si aparece un dato empresarial no confirmado, NO lo corrijas: repórtalo como `PENDIENTE DE CONFIRMACIÓN DEL PROPIETARIO`.
+13. No alteres canonical, hreflang, x-default, URLs, Open Graph URL, JSON-LD URL, breadcrumbs, titles, descriptions, FAQs, enlaces, fechas, precios, licencias, servicios ni texto visible salvo una corrección exacta y autorizada.
+14. No hagas refactor, rediseño ni mejoras opcionales.
 
-OBOWIĄZKOWY PRZEPŁYW GITHUB
-1. Zacznij od aktualnego `main` i utwórz/użyj gałęzi `correcciones/pl`. NIGDY nie wprowadzaj poprawek bezpośrednio na `main`.
-2. W tej gałęzi zmień wyłącznie autoryzowane 20 polskich plików HTML.
-3. Zacommituj poprawione HTML z jasnym komunikatem, np. `Correcciones PL: auditoría RSB`.
-4. Otwórz Pull Request z `correcciones/pl` do `main`. NIE scalaj go. Właściciel dokona przeglądu i podejmie decyzję.
-5. W opisie PR podaj: dokładnie zmienione pliki, zastosowane poprawki, wyniki walidacji, ewentualne pozostałe problemy oraz potwierdzenie, że nic poza zakresem nie zostało zmienione.
-6. Wygeneruj unified diff/patch względem `main` o nazwie `DIFF_PL.patch`.
+VALIDACIÓN OBLIGATORIA
+- Exactamente 20 HTML del idioma PL.
+- Comprueba las 20 rutas una por una.
+- 0 incidencias restantes de `width/height` de las filas listadas.
+- 0 referencias nuevas de imagen rotas.
+- 0 cambios en `src`, `srcset` o `sizes`.
+- 0 cambios en canonical/hreflang/x-default.
+- 226 permanece donde ya existía.
+- 0 archivos modificados fuera de las 20 rutas autorizadas.
+- Compara hashes antes/después e identifica cada archivo realmente cambiado.
 
-DOSTAWA KOŃCOWA
-- Utwórz `RSB_PL_20_HTML_POPRAWIONE.zip` jako pobieralną kopię zapasową. NIE commituj tego ZIP-a do repozytorium.
-- ZIP ma zawierać:
-  - 20 poprawionych HTML z dokładnie ich oryginalnymi ścieżkami repozytorium;
+FLUJO GITHUB OBLIGATORIO
+1. Crea/usa la rama `correcciones/pl` desde el `main` actual. NUNCA hagas las correcciones directamente en `main`.
+2. Modifica únicamente los HTML autorizados.
+3. Haz commit con mensaje claro.
+4. Abre Pull Request `correcciones/pl` → `main`.
+5. NO fusiones el PR.
+6. En la descripción del PR incluye archivos modificados, correcciones, validaciones, pendientes y confirmación de que no hubo cambios fuera de alcance.
+7. Genera `DIFF_PL.patch` respecto a `main`.
+
+ENTREGA FINAL
+- Genera `RSB_PL_20_HTML_POPRAWIONE.zip` como copia descargable. NO subas el ZIP al repositorio.
+- Debe incluir:
+  - los 20 HTML conservando sus rutas originales;
   - `RAPORT_ZMIAN_PL.txt`;
   - `SHA256_PL_PRZED_PO.csv`;
-  - `DIFF_PL.patch` z dokładnymi zmianami względem `main`;
-  - `GITHUB_PR_PL.txt` z repozytorium, gałęzią, SHA commita i URL-em Pull Requesta.
-- Na końcu czatu podaj: link do pobrania ZIP-a, URL Pull Requesta, nazwę gałęzi i SHA commita.
-- Przed dostarczeniem ponownie przeczytaj ten prompt i sprawdź, czy nic poza zakresem nie zostało zmienione.
+  - `DIFF_PL.patch`;
+  - `GITHUB_PR_PL.txt` con repositorio, rama, SHA del commit y URL del PR.
+- Al final entrega: enlace del ZIP, URL del PR, rama y SHA del commit.
+- Antes de entregar, relee este prompt y confirma que no cambiaste nada fuera del alcance.

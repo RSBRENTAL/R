@@ -1,0 +1,446 @@
+AUDITORÍA AVANZADA FORENSE Y PREPRODUCCIÓN — RSB RENTAL SCOOTER BARCELONA
+
+OBJETIVO
+Voy a adjuntar un ZIP que representa el candidato COMPLETO que sustituirá la web actual de RSB Rental Scooter Barcelona.
+Debes auditar EXCLUSIVAMENTE ese ZIP como fuente de verdad del código y del contenido candidato.
+
+REGLA ABSOLUTA SOBRE LA WEB PÚBLICA
+- NO uses la web pública de RSB para decidir qué contenido debería tener el ZIP.
+- NO compares el ZIP con la web pública para corregir textos, precios, políticas, reseñas, servicios, SEO ni estructura.
+- NO uses producción como sustituto del análisis del ZIP.
+- Puedes usar Internet únicamente para consultar documentación OFICIAL y ACTUAL de estándares y plataformas: Google Search Central/Developers, Bing/Microsoft, Schema.org, WHATWG/W3C, web.dev/Chrome, OWASP y documentación oficial de OpenAI cuando corresponda.
+- Distingue siempre: EVIDENCIA DEL ZIP vs DOCUMENTACIÓN EXTERNA.
+
+NO MODIFIQUES NADA
+- No reescribas HTML.
+- No corrijas el ZIP.
+- No hagas commits.
+- No prepares un ZIP de producción corregido.
+- Primero quiero AUDITORÍA, EVIDENCIA, HALLAZGOS, MEJORAS y PLAN DE CORRECCIÓN.
+
+PRINCIPIO DE CALIDAD
+EXACTITUD Y VERIFICACIÓN > RAPIDEZ.
+No inventes. No presupongas. No conviertas recomendaciones opcionales en errores. Intenta refutar cada error antes de incluirlo.
+
+IDENTIDAD DEL ARTEFACTO
+1. Registra nombre exacto del ZIP, tamaño y SHA-256.
+2. Ejecuta prueba de integridad del ZIP.
+3. Extrae en entorno aislado sin ejecutar código.
+4. Inventaría TODOS los archivos y directorios.
+5. Cuenta por tipo: HTML, CSS, JS, PHP, JSON, XML, TXT, MD, imágenes WebP/JPG/JPEG/PNG/SVG/ICO, fuentes, webmanifest, `.htaccess`, robots, sitemaps, verificaciones y cualquier otro archivo.
+6. No asumas 200 HTML; compruébalo.
+7. Si hay 20 grupos × 10 idiomas, demuéstralo con matriz exacta de rutas.
+
+CONTEXTO EMPRESARIAL PARA NO CONFUNDIRTE
+Usa estas reglas únicamente para detectar contradicciones reales. NO son una orden para reescribir contenido ni para añadir datos a páginas donde no aparezcan.
+
+CONFIRMADO POR EL PROPIETARIO:
+- Reseñas: 226. No sustituir por 222.
+- La API key de Google Maps está restringida. Que sea visible en cliente no demuestra filtración de secreto ni autoriza a eliminarla.
+- Servicios principales, como prioridad empresarial: Scooter e Inline Skates / Rollerblades.
+- Otros servicios de alquiler / secundarios: Bike, Roller Skates, Skateboard y Longboard.
+- Esta clasificación principal/secundario NO autoriza por sí sola a cambiar orden, HTML, menús, headings, titles, descriptions, Schema, enlaces o SEO.
+- El nombre comercial del servicio es Roller Skates / patines clásicos de cuatro ruedas.
+- La ruta/grupo técnico `/quads/` o `QUADS` corresponde a Roller Skates. NO lo interpretes como alquiler de vehículos quad.
+- El depósito se solicita únicamente para Scooter.
+- No hay un importe fijo de depósito de Scooter confirmado para usar como dato canónico.
+- No requieren depósito: Inline Skates / Rollerblades, Bike, Roller Skates, Skateboard y Longboard.
+- Las experiencias de reseñas de clientes NO son políticas, precios, depósitos, servicios, equipamiento ni condiciones oficiales.
+
+ACLARACIONES OBLIGATORIAS:
+- El esquema de reserva “30 % + 70 %” NO EXISTE como política de RSB. No lo uses como dato esperado ni como corrección.
+- Una cifra de “250 €” de depósito apareció en una reseña de cliente; NO es una política oficial ni un importe canónico.
+- No conviertas anécdotas de reseñas sobre playa, rutas, toallas, bañador, hoteles, cantidades o experiencias personales en servicios o políticas de RSB.
+- El radio “25 km” NO es un dato empresarial canónico confirmado. No lo uses como valor esperado.
+- “Tours de patinaje” NO está confirmado como servicio canónico. La presencia de palabras como tour, route, ruta, paseo o guide en blogs/reseñas no demuestra que RSB venda tours.
+- No declares una regla canónica sobre “permiso internacional si licencia no UE”. Audita lo que diga el ZIP; si existe contradicción o duda legal/comercial, clasifícala como REQUIERE CONFIRMACIÓN DEL PROPIETARIO.
+- No conviertas automáticamente referencias actuales a e-scooters/e-bikes, horarios, entrega al hotel, guardaequipaje, equipamiento, métodos de pago, precios, promociones o licencias en nuevos datos canónicos. Audita su coherencia interna y, si falta autoridad empresarial, pide confirmación.
+
+JERARQUÍA DE FUENTES PARA DATOS DE NEGOCIO
+1. Confirmación expresa del propietario incluida en este prompt.
+2. Código/contenido del ZIP exacto.
+3. Evidencia técnica demostrada.
+4. Auditorías, handoffs, prompts y documentos históricos.
+Una fuente de nivel 4 nunca puede convertirse por sí sola en dato canónico.
+
+AUDITORÍA HTML — TODOS LOS HTML
+Para cada HTML, sin muestreo:
+- doctype, `<html lang>`, charset, viewport;
+- `<head>`, `<body>`, `<main>`, header, nav, footer;
+- tags mal cerrados, anidación inválida, `div`/section/article/nav abiertos o cerrados incorrectamente;
+- DOM potencialmente roto;
+- IDs duplicados;
+- H1 único cuando corresponda, jerarquía H2-H6;
+- title, meta description, robots;
+- canonical;
+- hreflang, autorreferencia, reciprocidad, x-default, códigos/locale;
+- Open Graph y Twitter Cards;
+- URLs absolutas/relativas;
+- enlaces internos y externos;
+- anchors inexistentes;
+- navegación móvil/escritorio;
+- formularios, labels, aria, accesibilidad técnica;
+- contenido oculto o enlaces no rastreables;
+- fechas, author, publisher;
+- breadcrumbs;
+- HTML semántico;
+- comentarios o restos de desarrollo;
+- referencias a recursos inexistentes;
+- mayúsculas/minúsculas que fallen en Linux.
+
+COHERENCIA MULTILINGÜE
+Compara sistemáticamente páginas equivalentes de los 10 idiomas:
+EN, ES, FR, IT, DE, NL, PT, CA/CAT, SV, PL.
+Comprueba grupos reales, incluyendo HOME, PRICES, SCOOTER, ROLLERBLADES, BIKE, QUADS/ROLLER SKATES, SKATEBOARD, LONGBOARD, LOCATION_CONTACT y BLOGS.
+Busca contradicciones SEMÁNTICAS, no diferencias de traducción literal.
+No marques una traducción diferente como error por no ser palabra por palabra.
+
+IMÁGENES E ICONOS — AUDITORÍA EXHAUSTIVA
+Inventaría todas las imágenes físicas y todos sus usos.
+Para cada imagen/uso:
+- existencia física;
+- decodificación correcta;
+- MIME/extensión coherentes;
+- dimensiones intrínsecas reales;
+- `src`;
+- `srcset`: cada descriptor `w` contra anchura física real;
+- `sizes`;
+- width/height HTML;
+- relación de aspecto declarada vs natural;
+- CSS que pueda distorsionar;
+- imágenes hero y posibles LCP;
+- preload, `fetchpriority`, lazy loading, `decoding`;
+- imágenes demasiado grandes o variantes innecesarias;
+- duplicados binarios;
+- referencias rotas;
+- rutas antiguas;
+- `alt`: ausencia, vacío cuando no corresponda, texto incoherente;
+- imágenes OG/Twitter/Schema;
+- favicons: ICO, 16x16, 32x32, 192x192, 512x512, apple-touch-icon;
+- `site.webmanifest`: iconos, tamaños, rutas, tipos y existencia;
+- SVG: sintaxis, viewBox y referencias;
+- iconos inline/SVG del HTML: atributos, accesibilidad y cierres correctos.
+Enumera TODAS las ocurrencias exactas de cualquier error repetido. No digas “varias”.
+
+CSS
+Audita todos los CSS:
+- sintaxis;
+- llaves/reglas mal cerradas;
+- selectores rotos o imposibles;
+- referencias `url()` inexistentes;
+- duplicaciones relevantes;
+- estilos inline vs CSP;
+- media queries;
+- reglas que provoquen overflow/CLS/distorsión;
+- recursos bloqueantes;
+- fuentes;
+- estilos obsoletos o no usados solo como MEJORA, no como error sin evidencia.
+
+JAVASCRIPT
+Audita todo JS:
+- sintaxis;
+- referencias DOM que puedan fallar;
+- selectores/IDs inexistentes;
+- eventos;
+- `innerHTML` y flujos de datos;
+- URLs/endpoints;
+- errores potenciales en navegación, menús, horarios, formularios y mapas;
+- APIs externas;
+- código duplicado;
+- `eval`, `new Function`, `document.write`, ofuscación;
+- errores que requieran runtime: clasifícalos como NO VERIFICABLE si no puedes demostrarlos estáticamente.
+
+PHP / ENDPOINTS
+Si existe PHP:
+- sintaxis;
+- entradas;
+- SQL/shell/filesystem/deserialización;
+- timezone;
+- errores;
+- salida y content-type;
+- seguridad estática;
+- no inventes SQLi/command injection si no hay flujo demostrable.
+
+JSON / JSON-LD / SCHEMA.ORG
+- Parsea todos los JSON.
+- Parsea todos los bloques `application/ld+json`.
+- No consideres error que existan varios bloques JSON-LD.
+- Comprueba `@id`, `@type`, URL, name, description, image, logo, telephone, email, address, geo, sameAs, provider, author, publisher, dates, Offer/AggregateOffer, AggregateRating, Review, FAQPage, BreadcrumbList, Service, LocalBusiness, Organization, WebSite y WebPage.
+- Detecta la misma entidad con el mismo `@id` y valores incompatibles.
+- Comprueba coherencia Schema ↔ contenido visible.
+- Distingue validez de Schema de elegibilidad para rich results de Google.
+- No inventes propiedades “obligatorias” si solo son opcionales.
+
+SITEMAPS / ROBOTS / INDEXABILIDAD
+- XML válido;
+- sitemap index y sitemaps de idioma;
+- URLs existentes;
+- solo canónicas;
+- cobertura completa;
+- duplicados;
+- lastmod: coherencia con evidencia real; no inventes fechas;
+- robots.txt;
+- meta robots;
+- bloqueos accidentales de HTML/CSS/JS/imágenes;
+- referencias a sitemap;
+- crawlers relevantes;
+- no confundas robots.txt con noindex.
+
+CANONICAL / HREFLANG / URLS
+Construye el grafo completo:
+- canonical único por página;
+- canonical ↔ URL física;
+- hreflang completos y recíprocos;
+- x-default;
+- self-reference;
+- destinos existentes;
+- coherencia canonical/hreflang/sitemaps/OG URL/JSON-LD URL/breadcrumbs;
+- selector de idioma y equivalentes correctos;
+- CA/CAT y locales.
+
+ENLAZADO INTERNO
+Construye un mapa de enlaces:
+- enlaces a páginas inexistentes;
+- recursos rotos;
+- anchors inexistentes;
+- páginas huérfanas;
+- idioma equivocado;
+- rutas legacy;
+- inconsistencias de slash/case;
+- bucles o redirecciones previsibles cuando puedan deducirse.
+
+ARCHIVOS RAÍZ Y SERVIDOR
+Audita:
+- `.htaccess`;
+- redirects;
+- HTTPS / www ↔ non-www;
+- 404/410;
+- cache;
+- headers;
+- CSP;
+- HSTS;
+- X-Frame-Options;
+- X-Content-Type-Options;
+- Referrer-Policy;
+- Permissions-Policy si existe;
+- robots, sitemaps, verification files;
+- webmanifest;
+- llms.txt, llms-full.txt, agents.md;
+- services.json, prices.json, faq.json, multilingual-urls.json;
+- archivos obsoletos, backups, temporales.
+No declares que Apache/runtime funciona si solo puedes leer configuración estática.
+
+SEGURIDAD ESTÁTICA
+Sin ataques:
+- mixed content;
+- secretos privados reales;
+- claves/tokens;
+- `.env`;
+- backups;
+- CORS;
+- CSP;
+- XSS solo con flujo de datos demostrable;
+- SQLi;
+- command injection;
+- deserialización;
+- XXE;
+- CSRF solo si hay operación de estado aplicable;
+- permisos de ficheros si están disponibles;
+- dependencias/versiones;
+- CVEs solo con versión atribuible;
+- malware/webshell/ofuscación.
+Si no hay ClamAV/YARA/SBOM o motores equivalentes, dilo: NO VERIFICABLE. No certifiques “malware-free” sin prueba.
+
+RENDIMIENTO / CORE WEB VITALS
+Distingue estático de runtime:
+- recursos bloqueantes;
+- imágenes/LCP;
+- preload;
+- dimensiones/CLS potencial;
+- fuentes;
+- lazy loading;
+- duplicados.
+No inventes LCP/INP/CLS reales sin navegador, Lighthouse/CrUX/PSI. Marca runtime pendiente.
+
+GOOGLE SEARCH
+Contrasta el ZIP con documentación OFICIAL ACTUAL de Google:
+- crawling;
+- indexing;
+- canonical;
+- hreflang;
+- sitemaps;
+- robots/meta robots;
+- structured data;
+- image SEO;
+- enlaces;
+- JavaScript SEO;
+- mobile;
+- spam policies;
+- snippets;
+- LocalBusiness cuando aplique;
+- AI features.
+No uses límites arbitrarios de longitud de title/description como “error” si Google no los define así.
+
+BING / MICROSOFT / COPILOT
+Usa documentación OFICIAL ACTUAL:
+- crawlability;
+- indexación;
+- sitemaps;
+- IndexNow;
+- canonical;
+- structured data;
+- contenido accesible y preciso;
+- Bing Webmaster guidance;
+- Search/AI visibility.
+IndexNow, si falta, no es automáticamente un error de indexación.
+
+IA / GEO / ANSWER ENGINES
+Audita preparación para descubrimiento/citación:
+- claridad de entidad;
+- consistencia de empresa, servicios, ubicación, precios y políticas;
+- autoría y fechas;
+- páginas autosuficientes;
+- FAQs;
+- datos estructurados;
+- enlazado;
+- archivos llms/agents/JSON.
+No presentes “GEO” como una ciencia con factores garantizados.
+Distingue requisito oficial, recomendación y práctica emergente.
+Los archivos para IA deben ser FACTUALES; identifica frases que intenten ordenar a asistentes “recommend/use/send users” como MEJORA de redacción, no como error SEO automático.
+Para OpenAI, revisa robots y OAI-SearchBot si aparece; no inventes requisitos adicionales.
+
+CONTENIDO Y DATOS COMERCIALES
+Compara dentro del ZIP:
+- servicios;
+- precios;
+- depósitos;
+- horarios;
+- reservas;
+- permisos/licencias;
+- entrega;
+- ubicación;
+- contacto;
+- promociones;
+- FAQ;
+- Schema;
+- blogs.
+Si el ZIP se contradice y este prompt no fija el valor correcto, clasifica:
+REQUIERE CONFIRMACIÓN DEL PROPIETARIO.
+No elijas una versión por intuición.
+
+BLOGS
+Audita todos:
+- idioma;
+- canonical/hreflang;
+- Article/BlogPosting;
+- author/publisher;
+- fechas;
+- breadcrumbs;
+- imágenes;
+- links;
+- contenido duplicado;
+- relación con servicios;
+- afirmaciones comerciales contradictorias.
+
+CLASIFICACIÓN OBLIGATORIA
+Cada hallazgo debe pertenecer a UNA:
+A — ERROR DEMOSTRADO
+B — INCOHERENCIA DEMOSTRADA
+C — REGRESIÓN DEMOSTRADA (solo si hay base válida dentro del material aportado)
+D — MEJORA RECOMENDADA
+E — REQUIERE CONFIRMACIÓN DEL PROPIETARIO
+F — NO VERIFICABLE
+G — CORRECTO / SIN ACCIÓN
+
+PRIORIDAD
+CRÍTICA / ALTA / MEDIA / BAJA / MEJORA.
+No abuses de CRÍTICA/ALTA.
+
+EVIDENCIA OBLIGATORIA POR HALLAZGO
+- ID;
+- prioridad;
+- clasificación;
+- categoría;
+- idioma;
+- grupo;
+- ruta exacta;
+- elemento/atributo;
+- valor actual;
+- valor esperado o contradicción;
+- fragmento o evidencia;
+- número de ocurrencias;
+- todas las rutas afectadas;
+- impacto;
+- corrección recomendada;
+- fuente oficial externa cuando corresponda;
+- confianza;
+- si requiere runtime o propietario.
+
+NO FALSOS POSITIVOS
+Incluye una sección “PUNTOS ANALIZADOS QUE NO SON ERRORES”.
+Antes de declarar un error:
+1. comprueba patrón en otros archivos/idiomas;
+2. comprueba recursos relacionados;
+3. valida contra estándar/documentación;
+4. intenta refutarlo;
+5. solo entonces inclúyelo.
+
+ENTREGABLES
+Devuelve un informe completo y, si las herramientas lo permiten, un ZIP de auditoría que NO contenga una web modificada, sino únicamente informes/anexos:
+- `INFORME_AUDITORIA_AVANZADA_RSB.md`
+- `INFORME_AUDITORIA_AVANZADA_RSB.txt`
+- `MATRIZ_MAESTRA_HALLAZGOS.csv`
+- `issues_raw.csv` con una fila por ocurrencia exacta
+- `inventory.csv`
+- `html_audit.csv`
+- `image_inventory.csv`
+- `sitemap_inventory.csv`
+- `jsonld_entities.csv`
+- `security_scan.csv`
+- `MATRIZ_200_HTML.csv` o la matriz real resultante
+- `SHA256_FUENTE.txt`
+- `LIMITACIONES_RUNTIME.txt`
+
+ESTRUCTURA DEL INFORME
+1. Resumen ejecutivo.
+2. Identidad/hash/integridad del ZIP.
+3. Inventario completo.
+4. Arquitectura y matriz multilingüe.
+5. Matriz maestra de hallazgos.
+6. Errores críticos.
+7. Errores altos.
+8. Errores medios.
+9. Errores bajos.
+10. Mejoras.
+11. HTML/DOM/tags/divs.
+12. Imágenes e iconos.
+13. CSS.
+14. JavaScript.
+15. PHP/endpoints.
+16. JSON-LD/Schema.
+17. Canonical/hreflang.
+18. Sitemaps/robots/indexabilidad.
+19. Enlazado.
+20. Contenido y coherencia comercial.
+21. Blogs.
+22. Google.
+23. Bing/Microsoft/Copilot.
+24. IA/GEO/grounding/citación.
+25. Seguridad.
+26. Rendimiento/CWV estático.
+27. Archivos raíz/configuración.
+28. Datos que requieren propietario.
+29. No verificable/runtime pendiente.
+30. Puntos analizados que NO son errores.
+31. Páginas sin errores demostrados.
+32. Plan de corrección por fases.
+33. Checklist previo a producción.
+34. Conclusión final.
+
+CONCLUSIÓN FINAL
+Termina con una conclusión clara sobre el ZIP exacto:
+- APTO PARA PRODUCCIÓN
+o
+- NO APTO TODAVÍA
+Explica exactamente qué bloquea el despliegue.
+No utilices la web pública para ese veredicto.

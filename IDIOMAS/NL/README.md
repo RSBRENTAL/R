@@ -1,15 +1,19 @@
 # NL — Neerlandés
 
-Contenido:
-- `PAGINAS_REPO/`: 20 HTML originales de este idioma, copiados byte a byte desde el ZIP auditado.
-- `00_AUDITORIA_NO_IMAGEN_ORIGINAL.csv`: filas originales del Listado 1 para este idioma.
-- `01_CORRECCIONES_POR_PAGINA.md`: resumen operativo página por página.
-- `02_ERRORES_DIMENSIONES_IMAGENES.csv`: incidencias exactas `width/height` para este idioma.
-- `03_CORRECCIONES_OPERATIVAS_20_PAGINAS.csv`: matriz compacta de trabajo.
+Contenido operativo:
+- `PAGINAS_REPO/`: 20 HTML originales de este idioma.
+- `00_AUDITORIA_NO_IMAGEN_ORIGINAL.csv`: evidencia histórica; **NO es una orden de corrección ni fuente empresarial**.
+- `01_CORRECCIONES_POR_PAGINA.md`: resumen por página, limpio de supuestos datos empresariales no confirmados.
+- `02_ERRORES_DIMENSIONES_IMAGENES.csv`: incidencias exactas `width/height`; fuente técnica principal de la corrección.
+- `03_CORRECCIONES_OPERATIVAS_20_PAGINAS.csv`: matriz auxiliar exclusivamente técnica.
 - `04_MANIFEST_20_PAGINAS_SHA256.csv`: rutas y hashes originales.
-- `05_PROMPT_NUEVO_CHAT_NL.txt`: prompt exacto para abrir un chat nuevo y corregir solo este idioma.
+- `05_PROMPT_GITHUB_NL.txt`: prompt operativo vigente.
 
-Totales:
+Fuente empresarial vigente:
+- `../../AUDITORIA_COMPARTIDA/DATOS_CANONICOS_PROPIETARIO.md`
+
+El antiguo `05_PROMPT_NUEVO_CHAT_NL.txt` queda retirado para evitar el uso accidental de instrucciones obsoletas.
+
+Totales de la fuente original:
 - Páginas: 20
-- Incidencias de dimensiones: 40
-- HTML afectados por dimensiones: 20
+- Incidencias de dimensiones registradas: 40

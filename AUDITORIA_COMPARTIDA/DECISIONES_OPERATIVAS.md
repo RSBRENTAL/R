@@ -1,13 +1,17 @@
 # DECISIONES OPERATIVAS PARA LOS CHATS POR IDIOMA
 
-1. RSB-002 (dimensiones): ES CORRECCIÓN DE CÓDIGO. Aplicar exactamente las filas del CSV de cada idioma.
-2. `srcset`: NO modificar de forma masiva. La auditoría forense indica que no encontró errores generales de descriptor `w`.
-3. RSB-003 (Maps): NO es corrección HTML. El propietario confirma que la API key está restringida. No cambiar la key.
-4. RSB-008 (reseñas): el propietario fija 226 como valor canónico. El repo contiene 226 en los 200 HTML. NO cambiar a 222.
-6. No tocar canonical, hreflang, x-default, rutas, sitemap, JSON-LD, CSS, JS, imágenes físicas ni archivos raíz en los trabajos por idioma, salvo que el prompt de ese idioma lo autorice expresamente.
-7. Cada chat por idioma debe devolver únicamente los 20 HTML de ese idioma, conservando sus rutas originales, más informe de cambios y validación.
-
-## Rectificación expresa del propietario
-- El esquema de reserva 30 % + 70 % NO EXISTE y queda anulado. No usarlo, no corregir ninguna página hacia ese esquema y no tratarlo como dato oficial.
-- La cifra de 250 € de depósito NO es una política oficial de RSB: procede de una reseña de cliente. No usarla como dato canónico ni insertarla en la web.
-- Regla sobre reseñas: las experiencias narradas por clientes NO son políticas ni hechos empresariales oficiales. No convertir en contenido de la web anécdotas de reseñas sobre depósitos, importes, playa, toallas, bañador u otros detalles similares salvo que exista una fuente oficial independiente de RSB que lo confirme.
+1. La corrección de código demostrada y autorizada en esta fase es **RSB-002: dimensiones `width`/`height` de imágenes**. Aplicar exactamente las filas de `02_ERRORES_DIMENSIONES_IMAGENES.csv`.
+2. `srcset`: **NO modificar de forma masiva**. La auditoría forense no encontró un fallo general de los descriptores `w`.
+3. RSB-003 / Google Maps: **NO es una corrección HTML**. El propietario confirma que la API key está restringida. No cambiarla ni eliminarla por ser visible en cliente.
+4. Reseñas: mantener **226** donde ya exista. No sustituir por 222 ni insertar el número donde no exista.
+5. Leer y respetar `AUDITORIA_COMPARTIDA/DATOS_CANONICOS_PROPIETARIO.md`.
+6. La prioridad empresarial Scooter + Inline Skates / Rollerblades **no autoriza cambios automáticos de código, SEO, Schema, orden, navegación o contenido**.
+7. `/quads/` y el grupo `QUADS` corresponden al servicio **Roller Skates / patines clásicos de cuatro ruedas**; no a vehículos quad.
+8. Depósito: solo Scooter. Sin depósito: Inline Skates / Rollerblades, Bike, Roller Skates, Skateboard y Longboard. Esta regla sirve para detectar contradicciones, **no para insertar texto en páginas que no traten el tema**.
+9. Una reseña de cliente no puede convertirse en política, precio, depósito, servicio, equipamiento ni condición empresarial.
+10. Si aparece un supuesto dato empresarial no confirmado, no corregirlo: marcarlo como **PENDIENTE DE CONFIRMACIÓN DEL PROPIETARIO**.
+11. No tocar canonical, hreflang, x-default, rutas, sitemap, JSON-LD, CSS, JS, imágenes físicas ni archivos raíz salvo autorización expresa.
+12. No cambiar titles, descriptions, FAQs, textos visibles, precios, servicios, políticas comerciales o licencias salvo corrección exacta y autorizada.
+13. No convertir diferencias de traducción o redacción entre idiomas en errores sin contradicción semántica demostrada.
+14. No utilizar documentos históricos como autoridad empresarial. El archivo `00_AUDITORIA_NO_IMAGEN_ORIGINAL.csv` es evidencia histórica, no una orden de corrección.
+15. Cada chat debe trabajar en su rama `correcciones/<idioma>`, abrir PR hacia `main`, no fusionarlo y entregar ZIP de respaldo con diff, informe y hashes.
