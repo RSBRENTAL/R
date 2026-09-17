@@ -28,8 +28,21 @@ VALIDACIÓN OBLIGATORIA
 - El valor 226 permanece donde ya existe.
 - No se ha modificado ningún archivo fuera de las 20 rutas autorizadas.
 
-ENTREGA
-- Genera `RSB_ES_20_HTML_CORREGIDOS.zip` con solo los 20 HTML corregidos, preservando exactamente sus rutas originales dentro del repo.
-- Incluye `INFORME_CAMBIOS_ES.txt` con cada archivo, cambio anterior, cambio nuevo y validación.
-- Incluye `SHA256_ES_ANTES_DESPUES.csv`.
+FLUJO GITHUB OBLIGATORIO
+1. Parte del `main` actual y crea/usa la rama `correcciones/es`. NUNCA hagas las correcciones directamente en `main`.
+2. Aplica en esa rama únicamente los cambios autorizados en los 20 HTML españoles.
+3. Haz commit de los HTML corregidos con un mensaje claro, por ejemplo: `Correcciones ES: auditoría RSB`.
+4. Abre un Pull Request desde `correcciones/es` hacia `main`. NO lo fusiones. El propietario revisará y decidirá si se integra.
+5. En la descripción del PR incluye: archivos exactos modificados, correcciones aplicadas, resultados de validación, incidencias pendientes si existen y confirmación de que no se modificó nada fuera del alcance.
+6. Genera un diff/patch unificado de todos los cambios respecto a `main` y llámalo `DIFF_ES.patch`.
+
+ENTREGA FINAL AL USUARIO
+- Genera `RSB_ES_20_HTML_CORREGIDOS.zip` como copia de seguridad descargable. NO subas este ZIP al repositorio.
+- El ZIP debe contener:
+  - los 20 HTML corregidos conservando exactamente sus rutas originales del repo;
+  - `INFORME_CAMBIOS_ES.txt` con archivo, valor anterior, valor nuevo y resultado de validación;
+  - `SHA256_ES_ANTES_DESPUES.csv`;
+  - `DIFF_ES.patch` con los cambios exactos frente a `main`;
+  - `GITHUB_PR_ES.txt` con repositorio, rama, SHA del commit y URL del Pull Request.
+- Al final del chat entrega: enlace de descarga del ZIP, URL del Pull Request, nombre de la rama y SHA del commit.
 - Antes de entregar, vuelve a leer este prompt y comprueba que no has cambiado nada fuera del alcance.
