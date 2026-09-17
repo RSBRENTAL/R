@@ -1,0 +1,35 @@
+CORRECT ONLY THE 20 ENGLISH PAGES IN THE GITHUB REPOSITORY `RSBRENTAL/R`, BRANCH `main`, FOLDER `IDIOMAS/EN/`.
+
+- The only code source for this task is `RSBRENTAL/R` → `main` → `IDIOMAS/EN/PAGINAS_REPO/`.
+- Exclusive workspace: `IDIOMAS/EN/`. Do not inspect, modify, or use `IDIOMAS/*` from any other language except to verify a cross-language invariant explicitly required by the listed correction.
+SOURCE AND SCOPE
+- Read EVERY file in `IDIOMAS/EN/` from start to finish before changing anything. Do not use another language folder as a substitute.
+- The code source is `RSBRENTAL/R` → `main` → `IDIOMAS/EN/PAGINAS_REPO/`.
+- Your exclusive scope is the 20 routes listed in `IDIOMAS/EN/04_MANIFEST_20_PAGINAS_SHA256.csv`.
+- Do not modify pages in other languages or shared root files, CSS, JS, JSON, XML, physical images, or configuration.
+
+CORRECTION INSTRUCTIONS
+1. Read `IDIOMAS/EN/01_CORRECCIONES_POR_PAGINA.md` in full.
+2. Apply EVERY row in `IDIOMAS/EN/02_ERRORES_DIMENSIONES_IMAGENES.csv`.
+3. For each image incident, change only the affected `<img>` `width` and `height` so they match the verified physical dimensions listed.
+4. DO NOT change `src`, `srcset`, `sizes`, filenames, formats, compression, or the physical image files. The forensic audit did not find a general `srcset` descriptor problem.
+5. RSB-003 / Google Maps: the owner confirms the API key is restricted. Do not change or remove the key merely because it is visible client-side.
+6. Reviews: the canonical value is 226. Do not change it to 222.
+7. Canonical business facts: booking is 30% by bank transfer to confirm and 70% on collection; reference scooter deposit is €250; no deposit for bikes, inline skates, classic roller skates, skateboards, or longboards; service radius is 25 km; e-scooters and e-bikes are not offered. If a page discusses one of these topics, it must not contradict these facts. Do not insert them into unrelated pages merely to repeat them.
+8. Do not alter canonical, hreflang, x-default, URLs, Open Graph URL, JSON-LD URL, breadcrumbs, titles, descriptions, links, dates, or unrelated content unless explicitly required by a listed correction.
+9. Do not refactor, redesign, or apply optional improvements.
+
+MANDATORY VALIDATION
+- Exactly 20 English HTML files must remain.
+- Check all 20 routes individually.
+- For these 20 pages: 0 listed `width/height` aspect-ratio errors remaining.
+- 0 new broken image references.
+- 0 changes to canonical/hreflang/x-default compared with the originals.
+- The value 226 remains where already present.
+- No file outside the 20 authorized routes has been modified.
+
+DELIVERY
+- Create `RSB_EN_20_HTML_CORRECTED.zip` containing only the 20 corrected HTML files, preserving their exact original repo paths.
+- Include `CHANGE_REPORT_EN.txt` with each file, old value, new value, and validation result.
+- Include `SHA256_EN_BEFORE_AFTER.csv`.
+- Before delivering, reread this prompt and verify that nothing outside scope was changed.

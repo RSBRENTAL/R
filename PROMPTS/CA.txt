@@ -1,0 +1,35 @@
+CORREGEIX EXCLUSIVAMENT LES 20 PÀGINES EN CATALÀ DEL REPOSITORI GITHUB `RSBRENTAL/R`, BRANCA `main`, CARPETA `IDIOMAS/CA/`.
+
+- L’única font de codi per a aquest treball és `RSBRENTAL/R` → `main` → `IDIOMAS/CA/PAGINAS_REPO/`.
+- Exclusive workspace: `IDIOMAS/CA/`. Do not inspect, modify, or use `IDIOMAS/*` from any other language except to verify a cross-language invariant explicitly required by the listed correction.
+FONT I ABAST
+- Llegeix TOTS els fitxers d’`IDIOMAS/CA/` de principi a fi abans de modificar res. No utilitzis cap altra carpeta d’idioma com a substitut.
+- La font del codi és `RSBRENTAL/R` → `main` → `IDIOMAS/CA/PAGINAS_REPO/`.
+- L’abast exclusiu són les 20 rutes de `IDIOMAS/CA/04_MANIFEST_20_PAGINAS_SHA256.csv`.
+- No modifiquis pàgines d’altres idiomes ni fitxers compartits d’arrel, CSS, JS, JSON, XML, imatges físiques o configuració.
+
+CORRECCIONS
+1. Llegeix íntegrament `IDIOMAS/CA/01_CORRECCIONES_POR_PAGINA.md`.
+2. Aplica TOTES les files de `IDIOMAS/CA/02_ERRORES_DIMENSIONES_IMAGENES.csv`.
+3. Per cada incidència d’imatge modifica només `width` i `height` del `<img>` afectat perquè coincideixin amb les dimensions físiques verificades.
+4. NO modifiquis `src`, `srcset`, `sizes`, noms de fitxer, formats, compressió ni les imatges físiques. L’auditoria no va detectar un error general dels descriptors `srcset`.
+5. RSB-003 / Google Maps: el propietari confirma que l’API key està restringida. No la modifiquis ni l’eliminis només perquè sigui visible al client.
+6. Ressenyes: el valor canònic és 226. No el canviïs a 222.
+7. Dades empresarials canòniques: reserva 30% per transferència per confirmar + 70% en recollir; dipòsit de referència d’scooter 250 €; sense dipòsit per a bicicletes, patins en línia, patins clàssics, skateboards i longboards; radi de servei 25 km; no s’ofereixen e-scooters ni e-bikes. Si una pàgina tracta algun d’aquests temes, no els pot contradir. No els afegeixis a pàgines no relacionades només per repetir-los.
+8. No alteris canonical, hreflang, x-default, URLs, Open Graph URL, JSON-LD URL, breadcrumbs, títols, descriptions, enllaços, dates o contingut no relacionat tret que una correcció llistada ho exigeixi explícitament.
+9. Sense refactor, redisseny ni millores opcionals.
+
+VALIDACIÓ OBLIGATÒRIA
+- Han de quedar exactament 20 HTML en català.
+- Comprova les 20 rutes una per una.
+- 0 errors llistats de relació `width/height`.
+- 0 noves referències d’imatge trencades.
+- 0 canvis en canonical/hreflang/x-default respecte de l’original.
+- El valor 226 es manté on ja existeix.
+- Cap fitxer fora de les 20 rutes autoritzades ha estat modificat.
+
+ENTREGA
+- Genera `RSB_CA_20_HTML_CORREGITS.zip` només amb els 20 HTML corregits i exactament les seves rutes originals.
+- Inclou `INFORME_CANVIS_CA.txt`.
+- Inclou `SHA256_CA_ABANS_DESPRES.csv`.
+- Abans d’entregar, rellegeix aquest prompt i comprova que no has modificat res fora de l’abast.

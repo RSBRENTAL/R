@@ -1,0 +1,21 @@
+﻿Grupo,Ruta exacta,SHA-256 original,Bytes,Incidencias dimensiones,Hallazgos no-imagen auditoría,Decisión operativa
+BIKE,bike/index.html,a1cdbedf9b3816430b98d99a1045a423a48d43b4de14eb4d8c77db69a8c357b1,75082,1,RSB-003,SIN CAMBIO HTML: API Maps restringida confirmada por propietario
+BLOG_50CC_VS_125CC,blog/50cc-vs-125cc-scooter-rental-barcelona/index.html,6536497406b24b11e29340b117b036f916e03357632f81c65b27ad5c302935fc,51948,1,—,Sin corrección no-imagen demostrada
+BLOG_BEGINNER_INLINE,blog/beginner-inline-skating-barcelona/index.html,8d634e3fa437d36a3c7ad6cd5821e1dae5c947afa7fdd8ce49a7fa5e6d227b7c,56596,1,—,Sin corrección no-imagen demostrada
+BLOG_BEST_ROUTES,blog/best-rollerblading-routes-barcelona/index.html,ea02236835a6912a18ff45a45da309a8c0556ea40a4fd17374d768edf56beb4d,48466,1,—,Sin corrección no-imagen demostrada
+BLOG_BIKE,blog/bike/index.html,21ff29d6484ec8f41e21ce09f1ee5de659fd8fff21771fdc0be122ada9465748,56436,1,RSB-003,SIN CAMBIO HTML: API Maps restringida confirmada por propietario
+BLOG_HOURLY_INLINE_RENTAL,blog/hourly-inline-skate-rental-barcelona/index.html,071f66a5e54bd56db74d13dd2c0c17d23c81c04a9418b67e041b4b84957096e4,56000,1,—,Sin corrección no-imagen demostrada
+BLOG_INDEX,blog/index.html,cfcf82332143bc75cc3dd41f243b513de8cc6b3cb2349684319a79a1a57f34f5,65665,1,—,Sin corrección no-imagen demostrada
+BLOG_INLINE_SKATES,blog/inline-skates/index.html,d0a06cba24d472b149a53eb2f8de125b1d6775edd5fbca618710a1b170702994,61203,1,RSB-003,SIN CAMBIO HTML: API Maps restringida confirmada por propietario
+BLOG_LONGBOARD,blog/longboard/index.html,5d7476c0a2c8ea3c07229825607e111fe7cc114e709801dd2912ce6abec13716,55474,1,RSB-003,SIN CAMBIO HTML: API Maps restringida confirmada por propietario
+BLOG_ROLLER_SKATES,blog/roller-skates/index.html,39fef1896ffcbdaf48b86a48d28f0101986bfb032521161b465f1646c1399ef3,55582,1,RSB-003,SIN CAMBIO HTML: API Maps restringida confirmada por propietario
+BLOG_SCOOTER,blog/scooter/index.html,c52e4eb1f013cb35c287446482afe10c9c81f3d423c29840e0c45dd43304027f,58989,1,RSB-003,SIN CAMBIO HTML: API Maps restringida confirmada por propietario
+BLOG_SKATEBOARD,blog/skateboard/index.html,350da279b7305ad2f0043acc2ac5209c905528df453659e11b1fb79c3b706168,54935,1,RSB-003,SIN CAMBIO HTML: API Maps restringida confirmada por propietario
+HOME,index.html,2a6c483824059fa602e0ef2af482939fc1f4e71f94342b9035b061201723c99d,99750,9,RSB-003; RSB-008,SIN CAMBIO HTML: API Maps restringida confirmada por propietario; MANTENER 226: valor canónico confirmado por propietario
+LOCATION_CONTACT,location-contact/index.html,92baaaf88bedbac82aa52cd10fa48545def355e4c3cdbbcaeb8bd06cdc5272a9,67701,1,RSB-003,SIN CAMBIO HTML: API Maps restringida confirmada por propietario
+LONGBOARD,longboard/index.html,437d1458a9e54e02e51905417c10f59f431c26b18cd07cead4f03aed612ba306,72039,3,RSB-003,SIN CAMBIO HTML: API Maps restringida confirmada por propietario
+PRICES,Prices/index.html,1df67b2105ba335b632433b2b156d46e75e7ef941dccdc1b97b5743c59f2c92c,104404,6,RSB-003,SIN CAMBIO HTML: API Maps restringida confirmada por propietario
+QUADS,quads/index.html,d851311d720cb2e2ad3376e3eb22a27e4ffcf611d3ddf0b4a62ba6941d65534a,72979,1,RSB-003,SIN CAMBIO HTML: API Maps restringida confirmada por propietario
+ROLLERBLADES,rollerblades/index.html,3de50b5a4dd436cfc361ff69154c2b5abb6c01aff713f26eb5d371cf97b8f015,81065,3,RSB-003,SIN CAMBIO HTML: API Maps restringida confirmada por propietario
+SCOOTER,scooter/index.html,1408f041ac9a78b502e749774f4e885b504911a58be7449e2c270a6f76a7d417,75434,2,RSB-003,SIN CAMBIO HTML: API Maps restringida confirmada por propietario
+SKATEBOARD,skateboard/index.html,3f2e4a1e7092c092b8c0838b7f0b21e86b8e618f4f2d84c55e0c8fc5705f074f,72280,3,RSB-003,SIN CAMBIO HTML: API Maps restringida confirmada por propietario

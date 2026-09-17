@@ -1,0 +1,33 @@
+POPRAW WYŁĄCZNIE 20 POLSKICH STRON Z DOŁĄCZONEGO PAKIETU RSB.
+
+ŹRÓDŁO I ZAKRES
+- Przeczytaj cały ZIP od pierwszego do ostatniego pliku przed wprowadzeniem jakiejkolwiek zmiany.
+- Źródłem kodu jest `00_FUENTES/RSB_WEB_REPO_FINAL_CORREGIDO_REAUDITADO_2026-09-15(5).zip`.
+- Wyłączny zakres to 20 ścieżek z `10_PL_Polski/04_MANIFEST_20_PAGINAS_SHA256.csv`.
+- Nie modyfikuj stron w innych językach ani wspólnych plików głównych, CSS, JS, JSON, XML, fizycznych obrazów lub konfiguracji.
+
+POPRAWKI
+1. Przeczytaj w całości `10_PL_Polski/01_CORRECCIONES_POR_PAGINA.md`.
+2. Zastosuj WSZYSTKIE wiersze z `10_PL_Polski/02_ERRORES_DIMENSIONES_IMAGENES.csv`.
+3. Dla każdego błędu obrazu zmień wyłącznie `width` i `height` odpowiedniego `<img>`, aby odpowiadały zweryfikowanym fizycznym wymiarom.
+4. NIE zmieniaj `src`, `srcset`, `sizes`, nazw plików, formatów, kompresji ani fizycznych plików obrazów. Audyt nie wykazał ogólnego problemu z deskryptorami szerokości `srcset`.
+5. RSB-003 / Google Maps: właściciel potwierdza, że klucz API jest ograniczony. Nie zmieniaj ani nie usuwaj klucza tylko dlatego, że jest widoczny po stronie klienta.
+6. Opinie: wartość kanoniczna to 226. Nie zmieniaj na 222.
+7. Kanoniczne dane biznesowe: rezerwacja 30% przelewem w celu potwierdzenia + 70% przy odbiorze; referencyjny depozyt za skuter 250 €; brak depozytu za rowery, rolki inline, klasyczne wrotki, deskorolki i longboardy; promień obsługi 25 km; firma nie oferuje e-scooterów ani e-bike'ów. Jeżeli strona porusza któryś z tych tematów, nie może im przeczyć. Nie dodawaj tych informacji do niepowiązanych stron tylko po to, aby je powtarzać.
+8. Nie zmieniaj canonical, hreflang, x-default, URL-i, Open Graph URL, JSON-LD URL, breadcrumbs, tytułów, descriptions, linków, dat ani niepowiązanej treści, chyba że wymaga tego wyraźnie wskazana poprawka.
+9. Bez refaktoryzacji, redesignu i opcjonalnych ulepszeń.
+
+OBOWIĄZKOWA WALIDACJA
+- Musi pozostać dokładnie 20 polskich plików HTML.
+- Sprawdź wszystkie 20 ścieżek pojedynczo.
+- 0 pozostałych wymienionych błędów proporcji `width/height`.
+- 0 nowych uszkodzonych odwołań do obrazów.
+- 0 zmian canonical/hreflang/x-default względem oryginału.
+- Wartość 226 pozostaje tam, gdzie już występuje.
+- Nie zmodyfikowano żadnego pliku poza 20 autoryzowanymi ścieżkami.
+
+DOSTAWA
+- Utwórz `RSB_PL_20_HTML_POPRAWIONE.zip` zawierający wyłącznie 20 poprawionych HTML z dokładnie oryginalnymi ścieżkami repozytorium.
+- Dodaj `RAPORT_ZMIAN_PL.txt`.
+- Dodaj `SHA256_PL_PRZED_PO.csv`.
+- Przed dostarczeniem ponownie przeczytaj ten prompt i sprawdź, czy nic poza zakresem nie zostało zmienione.

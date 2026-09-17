@@ -1,0 +1,33 @@
+CORRIGEER UITSLUITEND DE 20 NEDERLANDSE PAGINA'S VAN HET BIJGEVOEGDE RSB-PAKKET.
+
+BRON EN SCOPE
+- Lees de volledige ZIP van het eerste tot het laatste bestand voordat je iets wijzigt.
+- De codebron is `00_FUENTES/RSB_WEB_REPO_FINAL_CORREGIDO_REAUDITADO_2026-09-15(5).zip`.
+- De enige toegestane scope zijn de 20 paden in `06_NL_Nederlands/04_MANIFEST_20_PAGINAS_SHA256.csv`.
+- Wijzig geen pagina's in andere talen en geen gedeelde rootbestanden, CSS, JS, JSON, XML, fysieke afbeeldingen of configuratie.
+
+CORRECTIES
+1. Lees `06_NL_Nederlands/01_CORRECCIONES_POR_PAGINA.md` volledig.
+2. Voer ALLE regels uit `06_NL_Nederlands/02_ERRORES_DIMENSIONES_IMAGENES.csv` uit.
+3. Wijzig per afbeeldingsincident uitsluitend `width` en `height` van de betrokken `<img>` zodat deze overeenkomen met de geverifieerde fysieke afmetingen.
+4. Wijzig NIET `src`, `srcset`, `sizes`, bestandsnamen, formaten, compressie of de fysieke afbeeldingsbestanden. De forensische audit vond geen algemeen probleem met `srcset`-breedtedescriptoren.
+5. RSB-003 / Google Maps: de eigenaar bevestigt dat de API-key is beperkt. Wijzig of verwijder de key niet alleen omdat deze client-side zichtbaar is.
+6. Reviews: de canonieke waarde is 226. Niet wijzigen naar 222.
+7. Canonieke bedrijfsgegevens: reservering 30% via bankoverschrijving ter bevestiging + 70% bij ophalen; referentieborg scooter €250; geen borg voor fietsen, inline skates, klassieke rolschaatsen, skateboards en longboards; servicegebied 25 km; geen e-scooters en geen e-bikes. Als een pagina een van deze onderwerpen behandelt, mag zij deze feiten niet tegenspreken. Voeg ze niet toe aan niet-gerelateerde pagina's alleen om ze te herhalen.
+8. Wijzig canonical, hreflang, x-default, URL's, Open Graph URL, JSON-LD URL, breadcrumbs, titels, descriptions, links, datums of niet-gerelateerde inhoud niet tenzij een expliciet vermelde correctie dit vereist.
+9. Geen refactor, redesign of optionele verbeteringen.
+
+VERPLICHTE VALIDATIE
+- Exact 20 Nederlandse HTML-bestanden blijven bestaan.
+- Controleer alle 20 paden afzonderlijk.
+- 0 resterende vermelde `width/height`-verhoudingsfouten.
+- 0 nieuwe kapotte afbeeldingsreferenties.
+- 0 wijzigingen in canonical/hreflang/x-default ten opzichte van het origineel.
+- Waarde 226 blijft behouden waar deze al aanwezig is.
+- Geen bestand buiten de 20 geautoriseerde paden is gewijzigd.
+
+OPLEVERING
+- Maak `RSB_NL_20_HTML_GECORRIGEERD.zip` met alleen de 20 gecorrigeerde HTML-bestanden en exact hun oorspronkelijke repo-paden.
+- Voeg `WIJZIGINGSRAPPORT_NL.txt` toe.
+- Voeg `SHA256_NL_VOOR_NA.csv` toe.
+- Lees vóór oplevering deze prompt opnieuw en controleer dat niets buiten scope is gewijzigd.

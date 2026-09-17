@@ -1,0 +1,35 @@
+CORRIGE EXCLUSIVAMENTE AS 20 PÁGINAS EM PORTUGUÊS DO REPOSITÓRIO GITHUB `RSBRENTAL/R`, BRANCH `main`, PASTA `IDIOMAS/PT/`.
+
+- A única fonte de código para este trabalho é `RSBRENTAL/R` → `main` → `IDIOMAS/PT/PAGINAS_REPO/`.
+- Exclusive workspace: `IDIOMAS/PT/`. Do not inspect, modify, or use `IDIOMAS/*` from any other language except to verify a cross-language invariant explicitly required by the listed correction.
+FONTE E ÂMBITO
+- Lê TODOS os ficheiros em `IDIOMAS/PT/` do início ao fim antes de alterar qualquer coisa. Não uses outra pasta de idioma como substituto.
+- A fonte do código é `RSBRENTAL/R` → `main` → `IDIOMAS/PT/PAGINAS_REPO/`.
+- O âmbito exclusivo são as 20 rotas de `IDIOMAS/PT/04_MANIFEST_20_PAGINAS_SHA256.csv`.
+- Não alteres páginas de outros idiomas nem ficheiros partilhados da raiz, CSS, JS, JSON, XML, imagens físicas ou configuração.
+
+CORREÇÕES
+1. Lê integralmente `IDIOMAS/PT/01_CORRECCIONES_POR_PAGINA.md`.
+2. Aplica TODAS as linhas de `IDIOMAS/PT/02_ERRORES_DIMENSIONES_IMAGENES.csv`.
+3. Em cada ocorrência de imagem altera apenas `width` e `height` do `<img>` afetado para coincidir com as dimensões físicas verificadas.
+4. NÃO alteres `src`, `srcset`, `sizes`, nomes, formatos, compressão ou os ficheiros de imagem físicos. A auditoria não encontrou um erro geral nos descritores `srcset`.
+5. RSB-003 / Google Maps: o proprietário confirma que a API key está restringida. Não alteres nem removas a key apenas por estar visível no cliente.
+6. Avaliações: o valor canónico é 226. Não mudar para 222.
+7. Dados empresariais canónicos: reserva 30% por transferência para confirmar + 70% na recolha; caução de referência da scooter 250 €; sem caução para bicicletas, patins em linha, patins clássicos, skateboards e longboards; raio de serviço 25 km; não são oferecidas e-scooters nem e-bikes. Se uma página abordar estes temas não pode contradizer estes factos. Não os adiciones a páginas não relacionadas apenas para os repetir.
+8. Não alteres canonical, hreflang, x-default, URLs, Open Graph URL, JSON-LD URL, breadcrumbs, títulos, descriptions, links, datas ou conteúdo não relacionado salvo uma correção explicitamente listada.
+9. Sem refactor, redesign ou melhorias opcionais.
+
+VALIDAÇÃO OBRIGATÓRIA
+- Devem permanecer exatamente 20 HTML portugueses.
+- Verifica as 20 rotas uma a uma.
+- 0 erros listados de relação `width/height`.
+- 0 novas referências de imagem quebradas.
+- 0 alterações em canonical/hreflang/x-default face ao original.
+- O valor 226 permanece onde já existe.
+- Nenhum ficheiro fora das 20 rotas autorizadas foi alterado.
+
+ENTREGA
+- Gera `RSB_PT_20_HTML_CORRIGIDOS.zip` apenas com os 20 HTML corrigidos e exatamente os seus caminhos originais.
+- Inclui `RELATORIO_ALTERACOES_PT.txt`.
+- Inclui `SHA256_PT_ANTES_DEPOIS.csv`.
+- Antes de entregar, relê este prompt e confirma que nada fora do âmbito foi alterado.

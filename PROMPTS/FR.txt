@@ -1,0 +1,35 @@
+CORRIGE UNIQUEMENT LES 20 PAGES EN FRANÇAIS DU DÉPÔT GITHUB `RSBRENTAL/R`, BRANCHE `main`, DOSSIER `IDIOMAS/FR/`.
+
+- L’unique source de code pour ce travail est `RSBRENTAL/R` → `main` → `IDIOMAS/FR/PAGINAS_REPO/`.
+- Exclusive workspace: `IDIOMAS/FR/`. Do not inspect, modify, or use `IDIOMAS/*` from any other language except to verify a cross-language invariant explicitly required by the listed correction.
+SOURCE ET PÉRIMÈTRE
+- Lis TOUS les fichiers de `IDIOMAS/FR/` du début à la fin avant toute modification. N’utilise aucun autre dossier linguistique comme substitut.
+- La source du code est `RSBRENTAL/R` → `main` → `IDIOMAS/FR/PAGINAS_REPO/`.
+- Ton périmètre exclusif correspond aux 20 routes de `IDIOMAS/FR/04_MANIFEST_20_PAGINAS_SHA256.csv`.
+- Ne modifie aucune page d’une autre langue ni les fichiers partagés à la racine, CSS, JS, JSON, XML, images physiques ou configuration.
+
+CORRECTIONS
+1. Lis entièrement `IDIOMAS/FR/01_CORRECCIONES_POR_PAGINA.md`.
+2. Applique TOUTES les lignes de `IDIOMAS/FR/02_ERRORES_DIMENSIONES_IMAGENES.csv`.
+3. Pour chaque incidence d’image, modifie uniquement `width` et `height` du `<img>` concerné afin qu’ils correspondent aux dimensions physiques vérifiées.
+4. NE modifie PAS `src`, `srcset`, `sizes`, les noms, formats, compression ni les fichiers image physiques. L’audit n’a pas trouvé de problème général de descripteurs `srcset`.
+5. RSB-003 / Google Maps : le propriétaire confirme que la clé API est restreinte. Ne la modifie ni ne la supprime simplement parce qu’elle est visible côté client.
+6. Avis : la valeur canonique est 226. Ne la remplace pas par 222.
+7. Données métier canoniques : réservation 30 % par virement pour confirmer + 70 % au retrait ; dépôt scooter de référence 250 € ; pas de dépôt pour vélos, rollers en ligne, patins classiques, skateboards et longboards ; rayon de service 25 km ; pas de e-scooters ni de e-bikes. Si une page aborde l’un de ces sujets, elle ne doit pas les contredire. Ne les ajoute pas aux pages sans rapport uniquement pour les répéter.
+8. Ne modifie pas canonical, hreflang, x-default, URLs, Open Graph URL, JSON-LD URL, breadcrumbs, titres, descriptions, liens, dates ou contenu sans rapport sauf correction explicitement listée.
+9. Aucun refactor, redesign ou amélioration optionnelle.
+
+VALIDATION OBLIGATOIRE
+- Conserver exactement 20 HTML français.
+- Vérifier les 20 routes une par une.
+- 0 erreur de ratio `width/height` listée restante.
+- 0 nouvelle référence d’image cassée.
+- 0 changement de canonical/hreflang/x-default par rapport à l’original.
+- La valeur 226 reste inchangée là où elle existe.
+- Aucun fichier hors des 20 routes autorisées n’est modifié.
+
+LIVRAISON
+- Génère `RSB_FR_20_HTML_CORRIGES.zip` avec uniquement les 20 HTML corrigés et leurs chemins originaux exacts.
+- Ajoute `RAPPORT_MODIFICATIONS_FR.txt`.
+- Ajoute `SHA256_FR_AVANT_APRES.csv`.
+- Relis ce prompt avant la livraison et vérifie que rien hors périmètre n’a été modifié.
