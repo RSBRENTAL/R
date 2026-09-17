@@ -1,0 +1,89 @@
+name: RSB one-shot prompt cleanup
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '._rsb_cleanup_payload.b64'
+
+permissions:
+  contents: write
+
+jobs:
+  apply-cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Apply staged cleanup
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import base64, io, tarfile, csv
+
+          root = Path('.')
+          payload = root / '._rsb_cleanup_payload.b64'
+          raw = base64.b64decode(payload.read_text(encoding='utf-8').strip())
+          with tarfile.open(fileobj=io.BytesIO(raw), mode='r:gz') as tf:
+              for member in tf.getmembers():
+                  target = (root / member.name).resolve()
+                  if root.resolve() not in target.parents and target != root.resolve():
+                      raise RuntimeError(f'Unsafe path in payload: {member.name}')
+              tf.extractall(root)
+
+          codes = ['EN','ES','FR','IT','DE','NL','PT','CA','SV','PL']
+          for code in codes:
+              obsolete = root / f'IDIOMAS/{code}/05_PROMPT_NUEVO_CHAT_{code}.txt'
+              if obsolete.exists():
+                  obsolete.unlink()
+
+          # Validaciones del saneamiento.
+          for code in codes:
+              active = (root / f'PROMPTS/{code}.txt').read_text(encoding='utf-8')
+              for forbidden in ('30 % + 70 %', '30% transferencia', '250 €', '25 km', 'tours de patinaje'):
+                  if forbidden in active:
+                      raise AssertionError(f'{forbidden!r} remains in active prompt {code}')
+              mirror = (root / f'IDIOMAS/{code}/05_PROMPT_GITHUB_{code}.txt').read_text(encoding='utf-8')
+              if mirror != active:
+                  raise AssertionError(f'Prompt mirror mismatch: {code}')
+              csv_path = root / f'IDIOMAS/{code}/03_CORRECCIONES_OPERATIVAS_20_PAGINAS.csv'
+              with csv_path.open('r', encoding='utf-8-sig', newline='') as f:
+                  header = next(csv.reader(f))
+              expected = ['Idioma','Grupo','Ruta','Incidencias dimensiones','Correcciones dimensiones','No-imagen auditoría','Decisión operativa']
+              if header != expected:
+                  raise AssertionError(f'Unexpected operational CSV header for {code}: {header}')
+              if (root / f'IDIOMAS/{code}/05_PROMPT_NUEVO_CHAT_{code}.txt').exists():
+                  raise AssertionError(f'Obsolete prompt still exists: {code}')
+
+          audit = (root / 'PROMPTS/AUDITORIA_AVANZADA_ZIP.txt').read_text(encoding='utf-8')
+          required = [
+              'ZIP', 'NO uses la web pública', 'Google', 'Bing', 'OpenAI',
+              'imágenes', 'iconos', 'div', '30 % + 70 %', '250 €',
+              'Roller Skates', '/quads/'
+          ]
+          for term in required:
+              if term not in audit:
+                  raise AssertionError(f'Missing required audit-prompt term: {term}')
+
+          payload.unlink()
+          workflow = root / '.github/workflows/rsb-one-shot-cleanup.yml'
+          if workflow.exists():
+              workflow.unlink()
+          PY
+
+      - name: Commit final cleanup
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "Sanear datos empresariales y añadir auditoría avanzada del ZIP"
+          git push origin HEAD:main
