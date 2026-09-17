@@ -28,21 +28,8 @@ MANDATORY VALIDATION
 - The value 226 remains where already present.
 - No file outside the 20 authorized routes has been modified.
 
-MANDATORY GITHUB WORKFLOW
-1. Start from the current `main` and create/use the branch `correcciones/en`. NEVER commit the corrections directly to `main`.
-2. Apply only the authorized changes to the 20 English HTML files in that branch.
-3. Commit the corrected HTML files with a clear commit message such as `Correcciones EN: auditoría RSB`.
-4. Open a Pull Request from `correcciones/en` to `main`. DO NOT merge it. The owner will review and decide whether to merge.
-5. In the PR body include: exact changed files, corrections applied, validation results, remaining issues if any, and confirmation that no file outside scope was changed.
-6. Produce a unified diff/patch of all changes against `main` and name it `DIFF_EN.patch`.
-
-FINAL DELIVERY TO THE USER
-- Create `RSB_EN_20_HTML_CORRECTED.zip` as a downloadable backup artifact. Do NOT commit this ZIP to the repository.
-- The ZIP must contain:
-  - the 20 corrected HTML files preserving their exact original repo paths;
-  - `CHANGE_REPORT_EN.txt` with each file, old value, new value, and validation result;
-  - `SHA256_EN_BEFORE_AFTER.csv`;
-  - `DIFF_EN.patch` containing the exact code changes versus `main`;
-  - `GITHUB_PR_EN.txt` with repository, branch, commit SHA and Pull Request URL.
-- At the end of the chat, provide: the ZIP download link, the Pull Request URL, branch name, and commit SHA.
+DELIVERY
+- Create `RSB_EN_20_HTML_CORRECTED.zip` containing only the 20 corrected HTML files, preserving their exact original repo paths.
+- Include `CHANGE_REPORT_EN.txt` with each file, old value, new value, and validation result.
+- Include `SHA256_EN_BEFORE_AFTER.csv`.
 - Before delivering, reread this prompt and verify that nothing outside scope was changed.
