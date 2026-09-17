@@ -28,8 +28,21 @@ OBOWIĄZKOWA WALIDACJA
 - Wartość 226 pozostaje tam, gdzie już występuje.
 - Nie zmodyfikowano żadnego pliku poza 20 autoryzowanymi ścieżkami.
 
-DOSTAWA
-- Utwórz `RSB_PL_20_HTML_POPRAWIONE.zip` zawierający wyłącznie 20 poprawionych HTML z dokładnie oryginalnymi ścieżkami repozytorium.
-- Dodaj `RAPORT_ZMIAN_PL.txt`.
-- Dodaj `SHA256_PL_PRZED_PO.csv`.
+OBOWIĄZKOWY PRZEPŁYW GITHUB
+1. Zacznij od aktualnego `main` i utwórz/użyj gałęzi `correcciones/pl`. NIGDY nie wprowadzaj poprawek bezpośrednio na `main`.
+2. W tej gałęzi zmień wyłącznie autoryzowane 20 polskich plików HTML.
+3. Zacommituj poprawione HTML z jasnym komunikatem, np. `Correcciones PL: auditoría RSB`.
+4. Otwórz Pull Request z `correcciones/pl` do `main`. NIE scalaj go. Właściciel dokona przeglądu i podejmie decyzję.
+5. W opisie PR podaj: dokładnie zmienione pliki, zastosowane poprawki, wyniki walidacji, ewentualne pozostałe problemy oraz potwierdzenie, że nic poza zakresem nie zostało zmienione.
+6. Wygeneruj unified diff/patch względem `main` o nazwie `DIFF_PL.patch`.
+
+DOSTAWA KOŃCOWA
+- Utwórz `RSB_PL_20_HTML_POPRAWIONE.zip` jako pobieralną kopię zapasową. NIE commituj tego ZIP-a do repozytorium.
+- ZIP ma zawierać:
+  - 20 poprawionych HTML z dokładnie ich oryginalnymi ścieżkami repozytorium;
+  - `RAPORT_ZMIAN_PL.txt`;
+  - `SHA256_PL_PRZED_PO.csv`;
+  - `DIFF_PL.patch` z dokładnymi zmianami względem `main`;
+  - `GITHUB_PR_PL.txt` z repozytorium, gałęzią, SHA commita i URL-em Pull Requesta.
+- Na końcu czatu podaj: link do pobrania ZIP-a, URL Pull Requesta, nazwę gałęzi i SHA commita.
 - Przed dostarczeniem ponownie przeczytaj ten prompt i sprawdź, czy nic poza zakresem nie zostało zmienione.
