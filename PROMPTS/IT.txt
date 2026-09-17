@@ -28,8 +28,21 @@ VALIDAZIONE OBBLIGATORIA
 - Il valore 226 rimane invariato dove già presente.
 - Nessun file fuori dalle 20 route autorizzate viene modificato.
 
-CONSEGNA
-- Genera `RSB_IT_20_HTML_CORRETTI.zip` con solo i 20 HTML corretti e i percorsi originali esatti.
-- Includi `RAPPORTO_MODIFICHE_IT.txt`.
-- Includi `SHA256_IT_PRIMA_DOPO.csv`.
+FLUSSO GITHUB OBBLIGATORIO
+1. Parti dal `main` corrente e crea/usa il branch `correcciones/it`. NON fare mai le correzioni direttamente su `main`.
+2. Applica nel branch soltanto le modifiche autorizzate ai 20 HTML italiani.
+3. Esegui il commit con un messaggio chiaro, ad esempio `Correcciones IT: auditoría RSB`.
+4. Apri una Pull Request da `correcciones/it` verso `main`. NON fare merge. Il proprietario la controllerà.
+5. Nel corpo della PR indica file modificati, correzioni applicate, risultati di validazione, eventuali problemi rimasti e conferma che nulla fuori ambito è stato modificato.
+6. Genera un diff/patch unificato contro `main` chiamato `DIFF_IT.patch`.
+
+CONSEGNA FINALE
+- Genera `RSB_IT_20_HTML_CORRETTI.zip` come copia di sicurezza scaricabile. NON committare questo ZIP nel repository.
+- Il ZIP deve contenere:
+  - i 20 HTML corretti con i percorsi repo originali esatti;
+  - `RAPPORTO_MODIFICHE_IT.txt`;
+  - `SHA256_IT_PRIMA_DOPO.csv`;
+  - `DIFF_IT.patch` con le modifiche esatte rispetto a `main`;
+  - `GITHUB_PR_IT.txt` con repository, branch, SHA del commit e URL della Pull Request.
+- Alla fine della chat fornisci: link di download del ZIP, URL della PR, nome del branch e SHA del commit.
 - Prima della consegna rileggi questo prompt e verifica di non aver modificato nulla fuori ambito.
